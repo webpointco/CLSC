@@ -1,0 +1,21 @@
+extends templates/page.pug
+
+block prepend header
+  - const page = "Home";
+
+block content
+  //section.hero.is-fullheight-with-navbar 
+    This is a Pug block buffered comment. It comments out the children too (including this text); it will be in the final HTML.
+  section.hero.is-medium.reverse-order
+    .container
+      .hero-body
+        .columns.is-vcentered.reverse-order
+          .column
+            h1.title.is-1.mb-6 Writing a slogan one word at a time
+            h3.subtitle.mb-6 We don't know what to put here, so here's a placeholder.
+            .has-text-centered
+              a.button.is-primary(href='/about-us.pug') About Us
+          .column
+            figure.image.is-4x5
+              img(src='/images/logo.png', alt='Big Logo')
+      .hero-footer
