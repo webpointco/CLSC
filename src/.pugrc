@@ -1,8 +1,7 @@
 {
   pretty: true,
   locals: {
-    title: "[Title]",
-    companyName: "[Company]",
+    title: "Chinese Language School of Columbia",
     links: [
       ["Home", "/"],
       ["About Us", "/about-us.pug"],
@@ -12,6 +11,5 @@
       ["Charitable Giving", "/charitable-giving.pug"],
       ["Contact Us", "/contact-us.pug"]
     ],
-    email: "someone@example.com"
   }
 }
