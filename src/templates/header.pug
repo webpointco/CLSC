@@ -1,9 +1,17 @@
-.column.is-centered.has-background-light
-  // this is just a placeholder until we get the image with the Chinese
-  h1.is-size-2.has-text-centered Chinese Language School of Columbia 
-nav.navbar(role='navigation', aria-label='main navigation').has-background-light#navbar
+.columns.has-background-light.mb-0
+  // this is just a placeholder until we get the image with the Chinese. watch
+    the spacing helpers they're probably irrelevant
+  .column.is-half.is-offset-one-quarter.pt-5.pb-0
+    h1.is-size-4.has-text-centered Chinese Language School of Columbia 
+  .column.is-one-fourth.has-text-centered.pt-5.pb-0
+    a.has-background-dark.is-size-5.has-text-white.py-3.px-3 English/Chinese
+nav.has-background-light.navbar#navbar(role='navigation', aria-label='main navigation')
   .navbar-brand
     a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded='false', data-target='navbar')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
       span(aria-hidden='true')
       span(aria-hidden='true')
       span(aria-hidden='true')
@@ -12,5 +20,5 @@ nav.navbar(role='navigation', aria-label='main navigation').has-background-light
         each link in links
           - let [name, url, icon] = link;
           a.navbar-item(class={'is-active': page === name}, href=url)
-            i(class=[icon]).has-text-primary &nbsp
+            i.has-text-primary(class=[icon]) &nbsp
             p #{name}

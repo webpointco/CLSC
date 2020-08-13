@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple Pug/SCSS boilerplate for WebPoint.",
   "dependencies": {
-    "bulma": "^0.8.2"
+    "bulma": "^0.9.0"
   },
   "scripts": {
     "build": "parcel build src/index.pug -d dist --no-source-maps",
