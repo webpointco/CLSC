@@ -1,12 +1,16 @@
-nav.navbar(role='navigation', aria-label='main navigation')
+.column.is-centered.has-background-light
+  // this is just a placeholder until we get the image with the Chinese
+  h1.is-size-2.has-text-centered Chinese Language School of Columbia 
+nav.navbar(role='navigation', aria-label='main navigation').has-background-light#navbar
   .navbar-brand
     a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded='false', data-target='navbar')
       span(aria-hidden='true')
       span(aria-hidden='true')
       span(aria-hidden='true')
-  .navbar-menu#navbar
-    .navbar-end
+    .navbar-menu
       .navbar-item
         each link in links
-          - let [name, url] = link;
-          a.navbar-item(class={'is-active': page === name}, href=url) #{name}
+          - let [name, url, icon] = link;
+          a.navbar-item(class={'is-active': page === name}, href=url)
+            i(class=[icon]).has-text-primary &nbsp
+            p #{name}
