@@ -1,0 +1,63 @@
+@charset 'utf-8'
+
+// SET 4 PALETTE COLORS LIKE THIS:
+// $palette-light: #EEE
+// $palette-mid: #666
+// $palette-dull: #444
+// $palette-dark: #111
+
+// SET USABLE CUSTOM COLORS LIKE THIS:
+// $custom-colors: ('palette-light': $palette-light, 'palette-mid': $palette-mid, 'palette-dull': $palette-dull, 'palette-dark': $palette-dark)
+
+// SET OTHER BULMA VARIABLES LIKE THIS:
+// $primary: $palette-mid
+// $light: $palette-light
+// $dark: $palette-dark
+
+// IMPORT FONTS LIKE THIS:
+@font-face
+  font-family: 'Montserrat'
+  font-style: normal
+  font-weight: normal
+  src: url('/fonts/Montserrat-Regular.ttf')
+
+
+// TELL BULMA TO USE FONTS LIKE THIS (the rest of the list are Bulma's default fonts):
+$family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+
+// USE BULMA~THIS:
+// @import '~bulma/sass/utilities/_all.sass'
+
+// @import '~bulma/sass/base/_all.sass'
+
+// @import '~bulma/sass/elements/box.sass'
+// @import '~bulma/sass/elements/button.sass'
+// @import '~bulma/sass/elements/container.sass'
+// @import '~bulma/sass/elements/content.sass'
+// @import '~bulma/sass/elements/icon.sass'
+// @import '~bulma/sass/elements/image.sass'
+// @import '~bulma/sass/elements/other.sass'
+// @import '~bulma/sass/elements/progress.sass'
+// @import '~bulma/sass/elements/table.sass'
+// @import '~bulma/sass/elements/title.sass'
+
+// @import '~bulma/sass/form/_all.sass'
+
+// @import '~bulma/sass/grid/_all.sass'
+
+// @import '~bulma/sass/components/navbar.sass'
+// @import '~bulma/sass/components/dropdown.sass'
+// @import '~bulma/sass/components/media.sass'
+
+// @import '~bulma/sass/layout/_all.sass'
+
+
+// USE BULMA AS A WHOLE LIKE THIS (before production, switch to modular to reduce size)
+@import '~bulma/bulma.sass'
+
+
+// AFTER BULMA IS IMPORTED, USE BULMA VARIABLES LIKE THIS:
+@media only screen and (max-width: $tablet)
+  .reverse-order
+    display: flex
+    flex-direction: column-reverse

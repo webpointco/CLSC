@@ -1,0 +1,13 @@
+{
+  pretty: true,
+  locals: {
+    title: "[Title]",
+    companyName: "[Company]",
+    links: [
+      ["Home", "/"],
+      ["About Us", "/about-us.pug"],
+      ["Contact", "/contact.pug"]
+    ],
+    email: "someone@example.com"
+  }
+}

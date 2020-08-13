@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.cache
+.temp
+
+.idea
+
+[Dd]esktop.ini
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
