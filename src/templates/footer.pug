@@ -1,3 +1,20 @@
 footer.footer
-  content.has-text-centered
-    p Website by #[a(href='https://github.com/webpointco') WebPoint]. © #{new Date().getFullYear()} #{companyName}
+  .container.is-centered
+    .columns.has-text-white
+      .column
+        content
+          p.py-1 #{new Date().getFullYear()} @ Chinese Language School of Columbia. All Rights Reserved.
+          p.py-1 Website created by #[a(href='https://github.com/webpointco') WebPoint]
+          br
+          // icons need to be linked to the actual socials!
+          .socials.is-size-1
+            i.fab.fa-facebook-square.pr-3
+            i.fab.fa-twitter-square.px-3
+      .column
+        each contact in contacts
+          - let [target, info] = contact;
+          .contacts.py-1  
+            span.has-text-weight-bold #{target}: 
+            span #{info}
+            br
+            

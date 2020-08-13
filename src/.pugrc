@@ -11,5 +11,12 @@
       ["Charitable Giving", "/charitable-giving.pug", "fas fa-gift"],
       ["Contact Us", "/contact-us.pug", "fas fa-envelope"]
     ],
+    contacts: [
+      ["School Address", "8700 Old Annapolis Rd, Ellicott City, MD 21043"],
+      ["Mailing Address", "P.O. Box 1292 Ellicott City, MD 21041"],
+      ["Principal", "clsc.principal@clscweb.org"],
+      ["Dean", "clsc.dean@clscweb.org"],
+      ["Registrar", "clsc.registrar@clscweb.org"]
+    ]
   }
 }
