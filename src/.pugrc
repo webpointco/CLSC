@@ -6,7 +6,11 @@
     links: [
       ["Home", "/"],
       ["About Us", "/about-us.pug"],
-      ["Contact", "/contact.pug"]
+      ["Academics", "/academics.pug"],
+      ["Calendar", "/calendar.pug"],
+      ["Registration", "/registration.pug"],
+      ["Charitable Giving", "/charitable-giving.pug"],
+      ["Contact Us", "/contact-us.pug"]
     ],
     email: "someone@example.com"
   }
