@@ -17,6 +17,11 @@
       ["Principal", "clsc.principal@clscweb.org"],
       ["Dean", "clsc.dean@clscweb.org"],
       ["Registrar", "clsc.registrar@clscweb.org"]
+    ],
+    form: [
+      ["Name", "text"],
+      ["Email", "email"],
+      ["Subject", "text"],
     ]
   }
 }
