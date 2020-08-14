@@ -21,7 +21,6 @@
     form: [
       ["Name", "text"],
       ["Email", "email"],
-      ["Subject", "text"],
-    ]
+    ],
   }
 }
