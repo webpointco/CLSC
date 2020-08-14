@@ -5,20 +5,17 @@
     h1.is-size-4.has-text-centered Chinese Language School of Columbia 
   .column.is-one-fourth.has-text-centered.pt-5.pb-0
     a.has-background-dark.is-size-5.has-text-white.py-3.px-3 English/Chinese
-nav.has-background-light.navbar#navbar(role='navigation', aria-label='main navigation')
+nav.has-background-light.navbar(role='navigation', aria-label='main navigation')
   .navbar-brand
     a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded='false', data-target='navbar')
       span(aria-hidden='true')
       span(aria-hidden='true')
       span(aria-hidden='true')
-      span(aria-hidden='true')
-      span(aria-hidden='true')
-      span(aria-hidden='true')
-      span(aria-hidden='true')
-    .navbar-menu
-      .navbar-item
-        each link in links
-          - let [name, url, icon] = link;
-          a.navbar-item(class={'is-active': page === name}, href=url)
-            i.has-text-primary(class=[icon]) &nbsp
-            p #{name}
+  .navbar-menu#navbar
+    .navbar-item
+      each link in links
+        - let [name, url, icon] = link;
+        a.navbar-item(class={'is-active': page === name}, href=url)
+          // i think it looks best if the icons aren't in the mobile nav
+          i.has-text-primary.is-hidden-touch(class=[icon]) &nbsp
+          p #{name}
