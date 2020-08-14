@@ -81,16 +81,20 @@ $input-focus-border-color: $dark
 
 
 // AFTER BULMA IS IMPORTED, USE BULMA VARIABLES LIKE THIS:
-@media only screen and (max-width: $tablet)
-  .reverse-order
-    display: flex
-    flex-direction: column-reverse
+@media only screen and (max-width: $desktop)
   html, body
-    display: table
-    margin: 0
-    width: 100%
+    display: block
+    margin: auto
+    width: auto
+  .mobile-no-pad
+    padding: 0
+    margin: 0px
+  footer.f-mobile
+    padding: 2rem
 
-@media only screen and (min-width: $tablet)
+
+
+@media only screen and (min-width: $desktop)
   #navbar
     display: flex
     justify-content: center

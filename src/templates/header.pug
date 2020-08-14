@@ -1,4 +1,4 @@
-.columns.has-background-light.mb-0
+.columns.has-background-light.mb-0.mobile-no-pad
   // this is just a placeholder until we get the image with the Chinese. watch
     the spacing helpers they're probably irrelevant
   .column.is-half.is-offset-one-quarter.pt-5.pb-0
@@ -18,4 +18,4 @@ nav.has-background-light.navbar(role='navigation', aria-label='main navigation')
         a.navbar-item(class={'is-active': page === name}, href=url)
           // i think it looks best if the icons aren't in the mobile nav
           i.has-text-primary.is-hidden-touch(class=[icon]) &nbsp
-          p #{name}
+          p.is-size-4-touch #{name}

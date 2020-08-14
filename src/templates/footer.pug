@@ -1,20 +1,25 @@
-footer.footer
+footer.footer.f-mobile
   .container.is-centered
-    .columns.has-text-white
+    .columns.has-text-white.has-text-centered-mobile
       .column
         content
           p.py-1 #{new Date().getFullYear()} @ Chinese Language School of Columbia. All Rights Reserved.
           p.py-1 Website created by #[a(href='https://github.com/webpointco') WebPoint]
           br
           // icons need to be linked to the actual socials!
-          .socials.is-size-1
+          .socials.is-size-1.is-hidden-touch
             i.fab.fa-facebook-square.pr-3
             i.fab.fa-twitter-square.px-3
       .column
         each contact in contacts
           - let [target, info] = contact;
-          .contacts.py-1  
+          .contacts.py-1.is-size-6-mobile
             span.has-text-weight-bold #{target}: 
+            br.is-hidden-desktop
             span #{info}
             br
-            
+      .column.is-hidden-desktop
+        // icons need to be linked to the actual socials!
+        .socials.is-size-1.is-large-mobile
+          i.fab.fa-facebook-square.pr-3
+          i.fab.fa-twitter-square.px-3

@@ -7,17 +7,17 @@ block content
   section.hero.is-primary
     .container
       .hero-body.py-5
-        h1.title.is-1.has-text-weight-bold Contact
+        h1.title.is-1.is-size-3-touch.has-text-weight-bold Contact Us
   .container.px-6.py-5
-    .columns
+    .columns.px-3
       .column
         each contact in contacts
           - let [target, info] = contact
-          h1.is-size-4.has-text-weight-bold #{target}
-          p.is-size-5 #{info}
+          p.is-size-4.is-size-5-mobile.has-text-weight-bold.my-1 #{target}
+          p.is-size-5.is-size-6-mobile #{info}
           br
       .column#contact
-        form.has-background-light.py-3.px-6(action='')
+        form.has-background-light.py-3.px-6.my-3(action='')
           label.label.has-text-weight-bold Name
           .control
             input.input.is-small.mb-4(type='text')
