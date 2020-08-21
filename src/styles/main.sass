@@ -1,0 +1,121 @@
+@charset 'utf-8'
+// SET 4 PALETTE COLORS LIKE THIS:
+// $palette-light: #EEE
+// $palette-mid: #666
+// $palette-dull: #444
+// $palette-dark: #111
+
+// SET USABLE CUSTOM COLORS LIKE THIS:
+// $custom-colors: ('palette-light': $palette-light, 'palette-mid': $palette-mid, 'palette-dull': $palette-dull, 'palette-dark': $palette-dark)
+
+/* light gray */
+$light: #EBEBEB
+/* red */
+$primary: #AE0616
+// dark gray
+$dark: #4D4D4D
+
+// IMPORT FONTS LIKE THIS:
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap')
+
+// TELL BULMA TO USE FONTS LIKE THIS (the rest of the list are Bulma's default fonts):
+$family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+$family-primary: 'Montserrat'
+
+
+// nav styling
+.header-top
+  justify-content: center
+  align-content: center
+
+.header-top img
+  width: 500px
+  margin: auto
+
+
+$navbar-item-hover-color: $primary
+$navbar-item-hover-background-color: none
+
+
+
+// footer styling
+$footer-background-color: $dark
+$footer-padding: 2rem 4rem
+
+// contact form styling
+$input-background-color: #D2D2D2
+$input-radius: 1px
+$input-focus-border-color: $dark
+
+.btn-container
+  display: flex
+  justify-content: center
+
+#contact input:focus
+  box-shadow: none
+
+#contact select:focus
+  box-shadow: none
+
+#message:focus
+  box-shadow: none
+
+// USE BULMA~THIS:
+// @import '~bulma/sass/utilities/_all.sass'
+
+// @import '~bulma/sass/base/_all.sass'
+
+// @import '~bulma/sass/elements/box.sass'
+// @import '~bulma/sass/elements/button.sass'
+// @import '~bulma/sass/elements/container.sass'
+// @import '~bulma/sass/elements/content.sass'
+// @import '~bulma/sass/elements/icon.sass'
+// @import '~bulma/sass/elements/image.sass'
+// @import '~bulma/sass/elements/other.sass'
+// @import '~bulma/sass/elements/progress.sass'
+// @import '~bulma/sass/elements/table.sass'
+// @import '~bulma/sass/elements/title.sass'
+
+// @import '~bulma/sass/form/_all.sass'
+
+// @import '~bulma/sass/grid/_all.sass'
+
+// @import '~bulma/sass/components/navbar.sass'
+// @import '~bulma/sass/components/dropdown.sass'
+// @import '~bulma/sass/components/media.sass'
+
+// @import '~bulma/sass/layout/_all.sass'
+
+
+// USE BULMA AS A WHOLE LIKE THIS (before production, switch to modular to reduce size)
+@import '~bulma/bulma.sass'
+
+
+// AFTER BULMA IS IMPORTED, USE BULMA VARIABLES LIKE THIS:
+@media only screen and (max-width: $desktop)
+  html, body
+    display: block
+    margin: auto
+    width: auto
+  .mobile-no-pad
+    padding: 0
+    margin: 0px
+  footer.f-mobile
+    padding: 2rem
+  .cc-padding
+    padding: 2rem 1rem
+  textarea.textarea[rows]
+    height: 12rem
+
+
+@media only screen and (min-width: $desktop)
+  #navbar
+    display: flex
+    justify-content: center
+    margin: auto
+  .navbar-item a
+    border: 3px $light solid
+  .navbar-item a.is-active
+    border: 3px #cd9095 solid
+  .cc-padding
+    padding: 3rem 1.5rem

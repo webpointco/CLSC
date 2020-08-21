@@ -1,0 +1,16 @@
+extends templates/basicPage.pug
+
+block prepend header
+  - const page = "About Us";
+
+block append styles
+  style.
+    #thisShouldReallyBeInAnotherFile {
+      display: none; /* No worries, it never will be used anyway */
+    }
+
+block append content
+  section.section
+    .container
+      p.
+        We are really boring people. Nothing interesting to see here.

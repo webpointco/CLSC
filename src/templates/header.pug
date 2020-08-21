@@ -1,0 +1,21 @@
+.columns.has-background-light.mb-0.mobile-no-pad.is-vcentered
+  .column.is-half.is-offset-one-quarter.pb-0.header-top.is-flex
+    a(href='index.pug')
+      img(src='/images/logo.png', alt='CLSC Logo') 
+  .column.is-one-fourth.has-text-centered.header-top
+    // font should be adjusted
+    a.has-background-dark.is-size-5.has-text-white.py-3.px-3 English/中文
+nav.has-background-light.navbar(role='navigation', aria-label='main navigation')
+  .navbar-brand
+    a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded='false', data-target='navbar')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+  .navbar-menu#navbar
+    .navbar-item
+      each link in links
+        - let [name, url, icon] = link;
+        a.navbar-item(class={'is-active': page === name}, href=url)
+          // i think it looks best if the icons aren't in the mobile nav
+          i.has-text-primary.is-hidden-touch(class=[icon]) &nbsp
+          p.is-size-4-touch #{name}
