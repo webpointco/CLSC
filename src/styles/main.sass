@@ -42,6 +42,35 @@ $navbar-item-hover-background-color: none
 $footer-background-color: $dark
 $footer-padding: 2rem 4rem
 
+//charitable styling
+$paypal-blue: #3D8BFF
+$zelle-purple: #6D1ED4
+
+.button.paypal
+  background-color: $paypal-blue
+
+.button.zelle
+  background-color: $zelle-purple
+
+button.button:focus:not(:active)
+  box-shadow: none
+
+ol
+  list-style: none
+
+ol li
+  counter-increment: my-awesome-counter
+
+ol li::before
+ content: counter(my-awesome-counter) ". "
+ font-weight: bold
+
+.column.has-text-black.special-border
+  border-right: 6px solid $primary
+
+.my-4.has-text-primary.has-text-weight-bold.is-size-5.has-text-centered.red-border
+  border: 2px solid $primary
+
 // contact form styling
 $input-background-color: #D2D2D2
 $input-radius: 1px
