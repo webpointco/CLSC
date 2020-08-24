@@ -1,21 +1,81 @@
-extends templates/page.pug
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    block styles
+      link(rel='stylesheet', href='/styles/main.sass')
+    block scripts
+      script(src='/scripts/main.js')
+    title #{title}
 
-block prepend header
-  - const page = "Home";
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+  
+  body
+    nav.navbar(role='navigation', aria-label='main navigation')
+      .navbar-brand
+        a.navbar-item.logo(href='/index.pug')
+          img(src='/images/Bill-CLSC-Logo-Grey.png')
+        a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded='false', data-target='navbar')
+          span(aria-hidden='true')
+          span(aria-hidden='true')
+          span(aria-hidden='true')
+      .navbar-menu#navbar
+        .navbar-end
+          .navbar-item
+            each link in links
+              - let [name, url] = link;
+              a.navbar-item(class={'is-active': page === name}, href=url) #{name}
 
-block content
-  //section.hero.is-fullheight-with-navbar 
-    This is a Pug block buffered comment. It comments out the children too (including this text); it will be in the final HTML.
-  section.hero.is-medium.reverse-order
-    .container
-      .hero-body
-        .columns.is-vcentered.reverse-order
-          .column
-            h1.title.is-1.mb-6 Writing a slogan one word at a time
-            h3.subtitle.mb-6 We don't know what to put here, so here's a placeholder.
-            .has-text-centered
-              a.button.is-primary(href='/about-us.pug') About Us
-          .column
-            figure.image.is-4x5
-              img(src='/images/logo.png', alt='Big Logo')
-      .hero-footer
+    section.hero.is-medium.is-danger
+      .container
+        .hero-body
+          p.welcome-title Welcome
+          .button-container
+            a.register-button Register Here
+    
+    section.hero.is-medium.is-primary
+      .container
+        .hero-body
+          .columns
+            .column
+              p.description-text #[strong The Chinese Language School of Columbia (CLSC)] was founded in 1975 in Howard County, MD. Since 2008, the school has been a proud partner of the Howard County Public School system. The school offers Chinese Language classes to both native and non-native speakers with emphasis on speaking Mandarin and writing traditional Chinese characters. Classes are held for two hours each Sunday afternoon and also includes cultural activities such as introduction to Chinese yo-yo, poetry, calligraphy, traditional cooking, and adult Tai-Chi
+
+            .column
+              figure.image.is-3by2
+                img(src='images/Image2.JPG')
+          .button-container
+            a.learn-more-button Learn More
+
+    section
+      .map(id="map")
+      
+      script.
+          // Initialize and add the map
+          function initMap() {
+            // The location of Howard High School
+            var howardHighSchool = {lat: 39.226202, lng: -76.812409};
+            // The map, centered at Howard High School
+            var map = new google.maps.Map(document.getElementById('map'), {zoom: 16.7, center: howardHighSchool});
+          // The marker, positioned at Howard High School
+          var marker = new google.maps.Marker({position: howardHighSchool, map: map});
+         }
+
+      script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYLXhDSP2OUR5HXKWgEmh0uRVNMNHm-bs&callback=initMap")
+    
+    section.hero.is-medium.is-dark
+      .container
+        .hero-body
+          .columns
+            .column
+              p.footer-text 2020 @ Chinese Language School of Columbia. All Rights Reserved.
+              p.footer-text Website Created by #[a.footer-link WebPoint]
+              span.fab.fa-twitter-square
+
+            .column
+              p.footer-list-text #[Strong School Address:] 8700 Old Annapolis Rd, Ellicott City MD, 21043
+              p.footer-list-text #[Strong Mailing Address:] P.O. Box 1292 Ellicott City MD, 21041
+              p.footer-list-text #[Strong Principal:] clsc.principal@clscweb.org
+              p.footer-list-text #[Strong Dean:] clsc.dean@clcsweb.org
+              p.footer-list-text #[Strong Registrar:] clsc.registrar@clscweb.org
+              

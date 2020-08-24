@@ -1,5 +1,7 @@
 nav.navbar(role='navigation', aria-label='main navigation')
   .navbar-brand
+    a.navbar-item(href='/index.pug')
+      img(src='/images/Bill-CLSC-Logo-Grey.png')
     a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded='false', data-target='navbar')
       span(aria-hidden='true')
       span(aria-hidden='true')
@@ -10,3 +12,4 @@ nav.navbar(role='navigation', aria-label='main navigation')
         each link in links
           - let [name, url] = link;
           a.navbar-item(class={'is-active': page === name}, href=url) #{name}
+  

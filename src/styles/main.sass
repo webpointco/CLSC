@@ -1,63 +1,96 @@
 @charset 'utf-8'
 
-// SET 4 PALETTE COLORS LIKE THIS:
-// $palette-light: #EEE
-// $palette-mid: #666
-// $palette-dull: #444
-// $palette-dark: #111
-
-// SET USABLE CUSTOM COLORS LIKE THIS:
-// $custom-colors: ('palette-light': $palette-light, 'palette-mid': $palette-mid, 'palette-dull': $palette-dull, 'palette-dark': $palette-dark)
-
 // SET OTHER BULMA VARIABLES LIKE THIS:
-// $primary: $palette-mid
-// $light: $palette-light
-// $dark: $palette-dark
+$primary: #EBEBEB
+$dark: #2D2D2D
 
-// IMPORT FONTS LIKE THIS:
 @font-face
   font-family: 'Montserrat'
   font-style: normal
   font-weight: normal
   src: url('/fonts/Montserrat-Regular.ttf')
 
+@font-face
+  font-family: 'Montserrat Medium'
+  font-style: normal
+  font-weight: medium
+  src: url('/fonts/Montserrat-Medium.ttf')
 
-// TELL BULMA TO USE FONTS LIKE THIS (the rest of the list are Bulma's default fonts):
+@font-face
+  font-family: 'Montserrat Bold'
+  font-style: normal
+  font-weight: bold
+  src: url('/fonts/Montserrat-Bold.ttf')
+
+@font-face
+  font-family: 'Montserrat SemiBold'
+  font-style: normal
+  font-weight: semi-bold
+  src: url('/fonts/Montserrat-SemiBold.ttf')
+
 $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
 
-// USE BULMA~THIS:
-// @import '~bulma/sass/utilities/_all.sass'
-
-// @import '~bulma/sass/base/_all.sass'
-
-// @import '~bulma/sass/elements/box.sass'
-// @import '~bulma/sass/elements/button.sass'
-// @import '~bulma/sass/elements/container.sass'
-// @import '~bulma/sass/elements/content.sass'
-// @import '~bulma/sass/elements/icon.sass'
-// @import '~bulma/sass/elements/image.sass'
-// @import '~bulma/sass/elements/other.sass'
-// @import '~bulma/sass/elements/progress.sass'
-// @import '~bulma/sass/elements/table.sass'
-// @import '~bulma/sass/elements/title.sass'
-
-// @import '~bulma/sass/form/_all.sass'
-
-// @import '~bulma/sass/grid/_all.sass'
-
-// @import '~bulma/sass/components/navbar.sass'
-// @import '~bulma/sass/components/dropdown.sass'
-// @import '~bulma/sass/components/media.sass'
-
-// @import '~bulma/sass/layout/_all.sass'
-
-
-// USE BULMA AS A WHOLE LIKE THIS (before production, switch to modular to reduce size)
 @import '~bulma/bulma.sass'
 
+@import "~bulma-carousel/src/sass/index.sass"
 
-// AFTER BULMA IS IMPORTED, USE BULMA VARIABLES LIKE THIS:
-@media only screen and (max-width: $tablet)
-  .reverse-order
-    display: flex
-    flex-direction: column-reverse
+@media only screen and (max-width: $navbar-breakpoint)
+  a.navbar-item.logo
+    justify-content: center
+
+.welcome-title
+  font-family: 'Montserrat Bold'
+  font-size: 80px
+
+.button-container
+  text-align: center
+
+.register-button
+  background-color: #AE0616
+  border: none
+  color: white
+  padding: 10px 32px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 20px
+  font-family: 'Montserrat Bold'
+
+.learn-more-button
+  background-color: #AE0616
+  border: none
+  color: white
+  padding: 10px 32px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 22px
+  font-family: 'Montserrat SemiBold'
+
+.description-text
+  font-family: 'Montserrat'
+  font-size: 20px
+  color: #4D4D4D 
+
+.footer-text
+  font-family: 'Montserrat'
+  font-size: 16px
+  color: white
+  padding-bottom: 12px
+
+.footer-list-text
+  font-family: 'Montserrat'
+  font-size: 14px
+  color: white
+  padding-bottom: 10px
+
+strong
+  color: inherit
+
+a.footer-link
+  color: #97AFFF
+  text-decoration: underline
+
+#map
+  height: 250px
+  width: 100%
