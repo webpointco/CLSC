@@ -32,8 +32,6 @@ $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI',
 
 @import '~bulma/bulma.sass'
 
-@import "~bulma-carousel/src/sass/index.sass"
-
 @media only screen and (max-width: $navbar-breakpoint)
   a.navbar-item.logo
     justify-content: center
@@ -70,7 +68,7 @@ $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI',
 .description-text
   font-family: 'Montserrat'
   font-size: 20px
-  color: #4D4D4D 
+  color: #4D4D4D
 
 .footer-text
   font-family: 'Montserrat'
@@ -94,3 +92,30 @@ a.footer-link
 #map
   height: 250px
   width: 100%
+
+//carousel styling
+.column.is-half.px-0.carousel-column
+  overflow: hidden
+  height: 440px
+
+.slider-container:focus
+  outline: none
+
+.slider:focus
+  outline: none
+
+.slider
+  width: inherit
+
+.slider-pagination .slider-page
+  box-shadow: none
+
+.slider .slider-pagination .slider-page:hover
+  transform: scale(1)
+
+.slider .slider-pagination .slider-page.is-active
+  background-color: #D0D0D0
+  transform: scale(1)
+
+.slider-container
+  width: inherit

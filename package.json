@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple Pug/SCSS boilerplate for WebPoint.",
   "dependencies": {
-    "bulma": "^0.8.2",
+    "bulma": "^0.9.0",
     "bulma-carousel": "^4.0.4",
     "core-js": "^2.6.11"
   },
@@ -25,10 +25,10 @@
   "devDependencies": {
     "del-cli": "^3.0.1",
     "eslint": "^7.4.0",
+    "parcel-bundler": "^1.12.4",
     "pug": "^2.0.4",
     "pug-lint": "^2.6.0",
-    "sass": "^1.26.10",
-    "parcel-bundler": "^1.12.4"
+    "sass": "^1.26.10"
   },
   "main": "index.js"
 }
