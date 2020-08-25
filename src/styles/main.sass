@@ -30,11 +30,6 @@ $dark: #2D2D2D
 
 $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
 
-@import '~bulma/bulma.sass'
-
-@media only screen and (max-width: $navbar-breakpoint)
-  a.navbar-item.logo
-    justify-content: center
 
 .welcome-title
   font-family: 'Montserrat Bold'
@@ -119,3 +114,14 @@ a.footer-link
 
 .slider-container
   width: inherit
+
+//import bulma
+@import '~bulma/bulma.sass'
+
+//carousel on mobile
+@media only screen and (max-width: $tablet)
+  .column.is-half.px-0.carousel-column
+    width: 350px
+    overflow: hidden
+    margin: 1rem
+    height: 300px
