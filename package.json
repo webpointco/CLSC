@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/agoldstein03/WebPoint-Boilerplate#readme",
   "devDependencies": {
+    "@creativebulma/bulma-divider": "^1.1.0",
     "del-cli": "^3.0.1",
     "eslint": "^7.4.0",
     "parcel-bundler": "^1.12.4",

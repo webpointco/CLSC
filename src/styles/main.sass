@@ -2,6 +2,7 @@
 
 // SET OTHER BULMA VARIABLES LIKE THIS:
 $primary: #EBEBEB
+$danger: #AE0616
 $dark: #2D2D2D
 
 @font-face
@@ -28,7 +29,16 @@ $dark: #2D2D2D
   font-weight: semi-bold
   src: url('/fonts/Montserrat-SemiBold.ttf')
 
+@font-face
+  font-family: 'Montserrat SemiBold Italic'
+  font-style: italic
+  font-weight: semi-bold
+  src: url('/fonts/Montserrat-SemiBoldItalic.ttf')
+
 $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+
+strong
+  font-family: Montserrat Bold
 
 .has-home-background-img
   background-image: url(/images/hero-image.png)
@@ -84,8 +94,8 @@ $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI',
   color: white
   padding-bottom: 10px
 
-strong
-  color: inherit
+.footer-text
+  color: white
 
 a.footer-link
   color: #97AFFF
@@ -128,13 +138,87 @@ a.footer-link
 .slider-container
   width: inherit
 
+.registration-banner-text
+  font-size: 60px
+  font-family: Montserrat Bold
+  color: white
+
+.hero-title
+  font-size: 50px
+  font-family: Montserrat Bold
+  color: #4D4D4D
+
+.registration-text
+  font-size: 28px
+  font-family: Montserrat
+  color: #4D4D4D
+  padding-bottom: 50px
+
+.children-text
+  text-align: center
+  font-size: 30px
+  font-family: Montserrat Bold
+  text-decoration: underline
+
+.section-heading
+  color: #4D4D4D
+  font-family: Montserrat Bold
+  font-size: 40px
+
+non-refundable
+  color: $danger
+  font-family: Montserrat Bold
+
+.list-text
+  padding-left: 14px
+
+.note-text
+  padding-left: 30px
+
+a.email
+  font-family: Montserrat SemiBold Italic
+  color: $danger
+
+a.link  
+  font-family: Montserrat Bold
+  color: $danger
+  text-decoration: underline
+
+.registration-button
+  background-color: #AE0616
+  border: none
+  color: white
+  width: 35%
+  height: 70px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 20px
+  font-family: 'Montserrat Bold'
+
+.button-text
+  padding-top: 3px
+  width: 60%
+  position: relative
+  left: 30%
+
 //import bulma
 @import '~bulma/bulma.sass'
 
-//carousel on mobile
+// on mobile
 @media only screen and (max-width: $tablet)
   .column.is-half.px-0.carousel-column
     width: 350px
     overflow: hidden
     margin: 1rem
     height: 300px
+
+  .center-child
+    border-top: 2px solid #ccc
+    border-bottom: 2px solid #ccc
+
+// not on mobile
+@media only screen and (min-width: $tablet)
+  .center-child
+    border-left: 2px solid #ccc
+    border-right: 2px solid #ccc

@@ -2,11 +2,11 @@ extends templates/page.pug
 
 block append styles 
   link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css")
-  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
 
 block content
     section.hero.is-medium.has-home-background-img
-      .transparent-layer
+      .transparent-layeroo
         .container
           .hero-body
             p.welcome-title.has-text-white.has-text-centered Welcome
@@ -65,7 +65,7 @@ block content
       script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYLXhDSP2OUR5HXKWgEmh0uRVNMNHm-bs&callback=initMap")
 
 block footer
-    section.hero.is-medium.is-dark
+    section.hero.is-small.is-dark
       .container
         .hero-body
           .columns
@@ -75,9 +75,9 @@ block footer
               span.fab.fa-twitter-square
 
             .column
-              p.footer-list-text #[Strong School Address:] 8700 Old Annapolis Rd, Ellicott City MD, 21043
-              p.footer-list-text #[Strong Mailing Address:] P.O. Box 1292 Ellicott City MD, 21041
-              p.footer-list-text #[Strong Principal:] clsc.principal@clscweb.org
-              p.footer-list-text #[Strong Dean:] clsc.dean@clcsweb.org
-              p.footer-list-text #[Strong Registrar:] clsc.registrar@clscweb.org
+              p.footer-list-text #[Strong.footer-text School Address:] 8700 Old Annapolis Rd, Ellicott City MD, 21043
+              p.footer-list-text #[Strong.footer-text Mailing Address:] P.O. Box 1292 Ellicott City MD, 21041
+              p.footer-list-text #[Strong.footer-text Principal:] clsc.principal@clscweb.org
+              p.footer-list-text #[Strong.footer-text Dean:] clsc.dean@clcsweb.org
+              p.footer-list-text #[Strong.footer-text Registrar:] clsc.registrar@clscweb.org
               
