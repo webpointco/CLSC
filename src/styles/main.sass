@@ -1,9 +1,10 @@
 @charset 'utf-8'
 
 // SET OTHER BULMA VARIABLES LIKE THIS:
-$primary: #EBEBEB
+$primary: #AE0616
 $danger: #AE0616
 $dark: #2D2D2D
+$light: #EBEBEB
 
 @font-face
   font-family: 'Montserrat'
@@ -36,6 +37,27 @@ $dark: #2D2D2D
   src: url('/fonts/Montserrat-SemiBoldItalic.ttf')
 
 $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+
+// nav styling
+.header-top
+  justify-content: center
+  align-content: center
+
+.header-top img
+  width: 500px
+  margin: auto
+
+$navbar-item-hover-color: #AE0616
+$navbar-item-hover-background-color: none
+
+// footer styling
+$footer-background-color: $dark
+$footer-padding: 2rem 4rem
+
+// contact form styling
+$input-background-color: #D2D2D2
+$input-radius: 1px
+$input-focus-border-color: $dark
 
 strong
   font-family: Montserrat Bold
@@ -222,3 +244,15 @@ a.link
   .center-child
     border-left: 2px solid #ccc
     border-right: 2px solid #ccc
+
+@media only screen and (min-width: $desktop)
+  #navbar
+    display: flex
+    justify-content: center
+    margin: auto
+  .navbar-item a
+    border: 3px $light solid
+  .navbar-item a.is-active
+    border: 3px #cd9095 solid
+  .cc-padding
+    padding: 3rem 1.5rem
