@@ -1,29 +1,47 @@
 @charset 'utf-8'
-// SET 4 PALETTE COLORS LIKE THIS:
-// $palette-light: #EEE
-// $palette-mid: #666
-// $palette-dull: #444
-// $palette-dark: #111
 
-// SET USABLE CUSTOM COLORS LIKE THIS:
-// $custom-colors: ('palette-light': $palette-light, 'palette-mid': $palette-mid, 'palette-dull': $palette-dull, 'palette-dark': $palette-dark)
-
-/* light gray */
+//colors////////////////////////////////////////////
 $light: #EBEBEB
-/* red */
 $primary: #AE0616
-// dark gray
 $dark: #4D4D4D
 
-// IMPORT FONTS LIKE THIS:
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap')
+//fonts/////////////////////////////////////////////
+@font-face
+  font-family: 'Montserrat'
+  font-style: normal
+  font-weight: normal
+  src: url('/fonts/Montserrat-Regular.ttf')
+
+@font-face
+  font-family: 'Montserrat Medium'
+  font-style: normal
+  font-weight: medium
+  src: url('/fonts/Montserrat-Medium.ttf')
+
+@font-face
+  font-family: 'Montserrat Bold'
+  font-style: normal
+  font-weight: bold
+  src: url('/fonts/Montserrat-Bold.ttf')
+
+@font-face
+  font-family: 'Montserrat SemiBold'
+  font-style: normal
+  font-weight: semi-bold
+  src: url('/fonts/Montserrat-SemiBold.ttf')
+
+@font-face
+  font-family: 'Montserrat SemiBold Italic'
+  font-style: italic
+  font-weight: semi-bold
+  src: url('/fonts/Montserrat-SemiBoldItalic.ttf')
 
 // TELL BULMA TO USE FONTS LIKE THIS (the rest of the list are Bulma's default fonts):
 $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
 $family-primary: 'Montserrat'
 
 
-// nav styling
+// nav styling /////////////////////////////////////
 .header-top
   justify-content: center
   align-content: center
@@ -32,19 +50,17 @@ $family-primary: 'Montserrat'
   width: 500px
   margin: auto
 
-
 $navbar-item-hover-color: $primary
 $navbar-item-hover-background-color: none
 $navbar-dropdown-background-color: $light
 $navbar-dropdown-arrow: $primary
 $navbar-dropdown-border-top: none
 
-
-// footer styling
+// footer styling //////////////////////////////////
 $footer-background-color: $dark
 $footer-padding: 2rem 4rem
 
-//charitable styling
+//charitable styling ///////////////////////////////
 $paypal-blue: #3D8BFF
 $zelle-purple: #6D1ED4
 
@@ -73,7 +89,7 @@ ol li::before
 .my-4.has-text-primary.has-text-weight-bold.is-size-5.has-text-centered.red-border
   border: 2px solid $primary
 
-// contact form styling
+// contact form styling ////////////////////////////////
 $input-background-color: #D2D2D2
 $input-radius: 1px
 $input-focus-border-color: $dark
@@ -91,32 +107,173 @@ $input-focus-border-color: $dark
 #message:focus
   box-shadow: none
 
-// USE BULMA~THIS:
-// @import '~bulma/sass/utilities/_all.sass'
+// home page styling /////////////////////////////////////
 
-// @import '~bulma/sass/base/_all.sass'
+strong
+  font-family: Montserrat Bold
 
-// @import '~bulma/sass/elements/box.sass'
-// @import '~bulma/sass/elements/button.sass'
-// @import '~bulma/sass/elements/container.sass'
-// @import '~bulma/sass/elements/content.sass'
-// @import '~bulma/sass/elements/icon.sass'
-// @import '~bulma/sass/elements/image.sass'
-// @import '~bulma/sass/elements/other.sass'
-// @import '~bulma/sass/elements/progress.sass'
-// @import '~bulma/sass/elements/table.sass'
-// @import '~bulma/sass/elements/title.sass'
+.has-home-background-img
+  background-image: url(/images/hero-image.png)
 
-// @import '~bulma/sass/form/_all.sass'
+.transparent-layer
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0, .5)
 
-// @import '~bulma/sass/grid/_all.sass'
+.welcome-title
+  font-family: 'Montserrat Bold'
+  font-size: 80px
 
-// @import '~bulma/sass/components/navbar.sass'
-// @import '~bulma/sass/components/dropdown.sass'
-// @import '~bulma/sass/components/media.sass'
+.button-container
+  text-align: center
 
-// @import '~bulma/sass/layout/_all.sass'
+.register-button
+  background-color: #AE0616
+  border: none
+  color: white
+  padding: 10px 32px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 20px
+  font-family: 'Montserrat Bold'
 
+.learn-more-button
+  background-color: #AE0616
+  border: none
+  color: white
+  padding: 10px 32px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 22px
+  font-family: 'Montserrat SemiBold'
+
+.description-text
+  font-family: 'Montserrat'
+  font-size: 20px
+  color: #4D4D4D
+
+.footer-text
+  font-family: 'Montserrat'
+  font-size: 16px
+  color: white
+  padding-bottom: 12px
+
+.footer-list-text
+  font-family: 'Montserrat'
+  font-size: 14px
+  color: white
+  padding-bottom: 10px
+
+.footer-text
+  color: white
+
+a.footer-link
+  color: #97AFFF
+  text-decoration: underline
+
+#map
+  height: 250px
+  width: 100%
+
+//carousel styling ///////////////////////////////////////
+.column.is-half.px-0.carousel-column
+  overflow: hidden
+  height: 440px
+
+.slider-container:focus
+  outline: none
+
+.slider:focus
+  outline: none
+
+.slider
+  width: inherit
+
+.slider-pagination .slider-page
+  box-shadow: none
+
+.slider .slider-pagination .slider-page:hover
+  transform: scale(1)
+
+.slider .slider-pagination .slider-page.is-active
+  background-color: #D0D0D0
+  transform: scale(1)
+
+.slider .slider-navigation-previous, .slider .slider-navigation-next
+  height: 30px
+  width: 30px
+  margin-left: 20px
+  margin-right: 20px
+
+.slider-container
+  width: inherit
+
+// registration page styling ////////////////////////////////
+.registration-banner-text
+  font-size: 60px
+  font-family: Montserrat Bold
+  color: white
+
+.hero-title
+  font-size: 50px
+  font-family: Montserrat Bold
+  color: #4D4D4D
+
+.registration-text
+  font-size: 28px
+  font-family: Montserrat
+  color: #4D4D4D
+  padding-bottom: 50px
+
+.children-text
+  text-align: center
+  font-size: 30px
+  font-family: Montserrat Bold
+  text-decoration: underline
+
+.section-heading
+  color: #4D4D4D
+  font-family: Montserrat Bold
+  font-size: 40px
+
+non-refundable
+  color: $primary
+  font-family: Montserrat Bold
+
+.list-text
+  padding-left: 14px
+
+.note-text
+  padding-left: 30px
+
+a.email
+  font-family: Montserrat SemiBold Italic
+  color: $primary
+
+a.link  
+  font-family: Montserrat Bold
+  color: $primary
+  text-decoration: underline
+
+.registration-button
+  background-color: #AE0616
+  border: none
+  color: white
+  width: 35%
+  height: 70px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 20px
+  font-family: 'Montserrat Bold'
+
+.button-text
+  padding-top: 3px
+  width: 60%
+  position: relative
+  left: 30%
 
 // USE BULMA AS A WHOLE LIKE THIS (before production, switch to modular to reduce size)
 @import '~bulma/bulma.sass'
