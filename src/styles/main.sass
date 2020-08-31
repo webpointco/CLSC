@@ -278,8 +278,7 @@ a.link
 // USE BULMA AS A WHOLE LIKE THIS (before production, switch to modular to reduce size)
 @import '~bulma/bulma.sass'
 
-
-// AFTER BULMA IS IMPORTED, USE BULMA VARIABLES LIKE THIS:
+// smaller than desktop //
 @media only screen and (max-width: $desktop)
   html, body
     display: block
@@ -302,7 +301,13 @@ a.link
   .d-pad-r
     padding-right: 0
 
+  .col-two
+    width: 100%
+    overflow: hidden
+    margin: 1rem
+    height: 100%
 
+// desktop or bigger //
 @media only screen and (min-width: $desktop)
   #navbar
     display: flex
@@ -322,3 +327,21 @@ a.link
     padding-left: 30px
   .d-pad-r
     padding-right: 30px
+
+  .col-two
+    width: 50%
+    overflow: hidden
+    margin: 1rem
+    height: 100%
+
+// on mobile //
+@media only screen and (max-width: $tablet)
+  .center-child
+    border-top: 2px solid #ccc
+    border-bottom: 2px solid #ccc
+
+// not on mobile //
+@media only screen and (min-width: $tablet)
+  .center-child
+    border-left: 2px solid #ccc
+    border-right: 2px solid #ccc
