@@ -16,8 +16,8 @@ nav.has-background-light.navbar(role='navigation', aria-label='main navigation')
       each link in links
         - let [name, url, icon, dropdown] = link;
           if dropdown
-            .navbar-item.has-dropdown.is-hoverable(class={'is-active': page === name}, href=url)
-              a.navbar-link #{name}
+            .navbar-item.has-dropdown.is-hoverable(href=url)
+              a.navbar-link(href=url) #{name}
               .navbar-dropdown
                 each option in dropdown
                   - let [title, target] = option;
