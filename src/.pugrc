@@ -4,8 +4,18 @@
     title: "Chinese Language School of Columbia",
     links: [
       ["Home", "/", "fas fa-home"],
-      ["About Us", "/about-us.pug", "far fa-file-image"],
-      ["Academics", "/academics.pug", "fas fa-graduation-cap"],
+      ["About Us", "/about-us.pug", "far fa-file-image", [
+        ["Our Teachers", "/our-teachers.pug"],
+        ["School Leadership", "/school-leadership.pug"],
+        ["Bylaws", "/bylaws.pug"]
+      ]],
+      ["Academics", "/academics.pug", "fas fa-graduation-cap", [
+        ["Curriculum", "/curriculum.pug"],
+        ["Student Life", "/student-life.pug"],
+        ["Classroom Rules", "/classroom-rules.pug"],
+        ["Virtual Classroom Rules", "/virtual-classroom-rules.pug"],
+        ["Learning Resources", "/learning-resources.pug"]
+      ]],
       ["Calendar", "/calendar.pug", "far fa-calendar-alt"],
       ["Registration", "/registration.pug", "fas fa-book"],
       ["Charitable Giving", "/charitable-giving.pug", "fas fa-gift"],

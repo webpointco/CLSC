@@ -2,3 +2,47 @@ extends templates/basicPage.pug
 
 block prepend header
   - const page = "Charitable Giving";
+
+block append content
+  .container.pt-5.px-6
+    .columns.mb-0
+      .column.is-three-fifths.is-size-5.pt-4.has-text-black
+        p The <strong>Chinese Language School of Columbia (CLSC)</strong> is a 501(c)(3) nonprofit, apolitical organization that is led by a group of community volunteers, including parents of students who matriculate in the school. Volunteers hold distinct positions such as Principal, Academic Dean, the Board of Directors (BoD), and a separate Board of Trustees (BoT), who oversee activities of the BoD.
+        p.pt-5 The ability of CLSC to carry its mission is completely dependent on tuition revenue, volunteer efforts from the school community and the gracious support of donors. We hope you will support our mission by donating to our school today.  
+      .column.is-two-fifths
+        img(src="images/CLSC-Heart.svg").is-3by4.px-3
+    h1.is-size-2.has-text-weight-bold.has-text-centered.has-text-black Donate Here
+    .columns.is-centered
+      .column.has-text-centered.my-5.has-text-white
+        button.button.is-large.paypal.mx-4.has-text-white.my-2 <i class="fab fa-paypal"></i> &nbsp PayPal
+        button.button.is-large.zelle.mx-4.has-text-white.my-2 <img src="images/ZelleApp_Icon.png" width="30rem"> &nbsp Zelle
+  section.has-background-light
+    .container.px-6
+      .columns.py-6.is-size-5
+        .column.has-text-black.special-border.d-pad-r
+          h1.is-size-3.has-text-weight-bold.is-size-4-mobile.py-2 Individual Charitable Contributions
+          p.py-3 Historically, charitable giving from individuals, families and estates has served as the primary financial resource for CLSC. Therefore, we greatly appreciate and welcome donations from our families and interested community members.
+          p There are numerous ways you can help our school. These include:
+          ol
+            li.pt-1 direct donation
+            li.pt-1 giving gift cards
+            li.pt-1 providing services
+            li.pt-1 donating prize items for special events
+            li.pt-1 donating indirectly by purchasing through Amazon Smile
+        .column.has-text-black.d-pad-l
+          h1.is-size-3.has-text-weight-bold.is-size-4-mobile.py-2 Organizational Support
+          p.py-3 CLSC received unrestricted funding from business organizations who see the objectives and mission of CLSC to be aligned with their vision of promoting valuable education and doing social good.
+          p.pb-3 Companies give direct donation, matching of donations, skills share and even donations for volunteerism. CLSC would like to acknowledge the following organizations for their ongoing support:
+          p.has-text-weight-bold McCormick and Company, Inc.
+          p.has-text-weight-bold Raytheon Technologies
+          p.has-text-weight-bold Merck & Co.
+          p.has-text-weight-bold Clorox
+  .container.px-6
+    .py-5.has-text-black
+      h1.is-size-3.has-text-weight-bold.is-size-4-mobile Grants
+      p.is-size-5 CLSC has received <em>unrestricted educational grants</em> from:
+      p.is-size-5 The Taipei Economic and Culture Representative Office (TECRO) in the United States.
+    .my-4.px-2.has-text-primary.has-text-weight-bold.is-size-5.has-text-centered.red-border.is-size-4-mobile
+      em We thank all our community contributors and invite you to support our important mission.
+      
+          
