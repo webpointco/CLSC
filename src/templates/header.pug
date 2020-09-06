@@ -1,4 +1,11 @@
-nav.navbar(role='navigation', aria-label='main navigation')
+.columns.has-background-light.mb-0.mobile-no-pad.is-vcentered
+  .column.is-half.is-offset-one-quarter.pb-0.header-top.is-flex
+    a(href='index.pug')
+      img(src='/images/logo.png', alt='CLSC Logo') 
+  .column.is-one-fourth.has-text-centered.header-top
+    // font should be adjusted
+    a.has-background-dark.is-size-5.has-text-white.py-3.px-3 English/中文
+nav.has-background-light.navbar(role='navigation', aria-label='main navigation')
   .navbar-brand
     a.navbar-item(href='/index.pug')
       img(src='/images/Bill-CLSC-Logo-Grey.png')
@@ -7,9 +14,17 @@ nav.navbar(role='navigation', aria-label='main navigation')
       span(aria-hidden='true')
       span(aria-hidden='true')
   .navbar-menu#navbar
-    .navbar-end
-      .navbar-item
-        each link in links
-          - let [name, url] = link;
-          a.navbar-item(class={'is-active': page === name}, href=url) #{name}
-  
+    .navbar-item
+      each link in links
+        - let [name, url, icon, dropdown] = link;
+          if dropdown
+            .navbar-item.has-dropdown.is-hoverable(href=url)
+              a.navbar-link(href=url) #{name}
+              .navbar-dropdown
+                each option in dropdown
+                  - let [title, target] = option;
+                  a.navbar-item#dropdownstyling(href=target) #{title}
+          else
+            a.navbar-item(class={'is-active': page === name}, href=url)
+              i.has-text-primary.is-hidden-touch(class=[icon]) &nbsp
+              p.is-size-4-touch #{name}
