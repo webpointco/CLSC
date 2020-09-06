@@ -23,7 +23,6 @@ $grey-light: $background-gray
 // IMPORT FONTS LIKE THIS:
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap')
 
-// TELL BULMA TO USE FONTS LIKE THIS (the rest of the list are Bulma's default fonts):
 $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
 $family-primary: 'Montserrat'
 
@@ -99,38 +98,142 @@ $input-focus-border-color: $dark
 #message:focus
   box-shadow: none
 
-// USE BULMA~THIS:
-// @import '~bulma/sass/utilities/_all.sass'
+.has-home-background-img
+  background-image: url(/images/hero-image.png)
 
-// @import '~bulma/sass/base/_all.sass'
+.transparent-layer
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0, .5)
 
-// @import '~bulma/sass/elements/box.sass'
-// @import '~bulma/sass/elements/button.sass'
-// @import '~bulma/sass/elements/container.sass'
-// @import '~bulma/sass/elements/content.sass'
-// @import '~bulma/sass/elements/icon.sass'
-// @import '~bulma/sass/elements/image.sass'
-// @import '~bulma/sass/elements/other.sass'
-// @import '~bulma/sass/elements/progress.sass'
-// @import '~bulma/sass/elements/table.sass'
-// @import '~bulma/sass/elements/title.sass'
+.welcome-title
+  font-family: 'Montserrat Bold'
+  font-size: 80px
 
-// @import '~bulma/sass/form/_all.sass'
+.button-container
+  text-align: center
 
-// @import '~bulma/sass/grid/_all.sass'
+.register-button
+  background-color: #AE0616
+  border: none
+  color: white
+  padding: 10px 32px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 20px
+  font-family: 'Montserrat Bold'
 
-// @import '~bulma/sass/components/navbar.sass'
-// @import '~bulma/sass/components/dropdown.sass'
-// @import '~bulma/sass/components/media.sass'
+.learn-more-button
+  background-color: #AE0616
+  border: none
+  color: white
+  padding: 10px 32px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 22px
+  font-family: 'Montserrat SemiBold'
 
-// @import '~bulma/sass/layout/_all.sass'
+.description-text
+  font-family: 'Montserrat'
+  font-size: 20px
+  color: #4D4D4D
 
+.footer-text
+  font-family: 'Montserrat'
+  font-size: 16px
+  color: white
+  padding-bottom: 12px
 
-// USE BULMA AS A WHOLE LIKE THIS (before production, switch to modular to reduce size)
+.footer-list-text
+  font-family: 'Montserrat'
+  font-size: 14px
+  color: white
+  padding-bottom: 10px
+
+strong
+  color: inherit
+
+a.footer-link
+  color: #97AFFF
+  text-decoration: underline
+
+#map
+  height: 250px
+  width: 100%
+
+//carousel styling
+.slider-container:focus
+  outline: none
+
+.slider:focus
+  outline: none
+
+.slider
+  width: inherit
+
+.slider-pagination .slider-page
+  box-shadow: none
+
+.slider .slider-pagination .slider-page:hover
+  transform: scale(1)
+
+.slider .slider-pagination .slider-page.is-active
+  background-color: #D0D0D0
+  transform: scale(1)
+
+.slider .slider-navigation-previous, .slider .slider-navigation-next
+  height: 30px
+  width: 30px
+  margin-left: 20px
+  margin-right: 20px
+
+.slider-container
+  width: inherit
+
+//import bulma
 @import '~bulma/bulma.sass'
 
+//carousel on mobile
 
-// AFTER BULMA IS IMPORTED, USE BULMA VARIABLES LIKE THIS:
+
+@media only screen and (max-width: $tablet)
+  .column.px-0.carousel-column
+    width: 350px
+    overflow: hidden
+    margin: 1rem
+
+@media only screen and (min-width: $tablet)
+  .column.px-0.carousel-column
+    overflow: hidden
+    height: 350px
+    width: 400px
+
+@media only screen and (min-width: $desktop)
+  .column.px-0.carousel-column
+    overflow: hidden
+    height: 400px
+    width: 500px
+  #navbar
+    display: flex
+    justify-content: center
+    margin: auto
+  .navbar-item a
+    border: 3px $light solid
+  .navbar-item a.is-active
+    border: 3px #cd9095 solid
+  #dropdownstyling
+    border: none
+  .cc-padding
+    padding: 3rem 1.5rem
+  .column.has-text-black.special-border
+    border-right: 6px solid $primary
+  .d-pad-l
+    padding-left: 30px
+  .d-pad-r
+    padding-right: 30px
+
 @media only screen and (max-width: $desktop)
   html, body
     display: block
@@ -152,24 +255,3 @@ $input-focus-border-color: $dark
     padding-left: 0
   .d-pad-r
     padding-right: 0
-
-
-@media only screen and (min-width: $desktop)
-  #navbar
-    display: flex
-    justify-content: center
-    margin: auto
-  .navbar-item a
-    border: 3px $light solid
-  .navbar-item a.is-active
-    border: 3px #cd9095 solid
-  #dropdownstyling
-    border: none
-  .cc-padding
-    padding: 3rem 1.5rem
-  .column.has-text-black.special-border
-    border-right: 6px solid $primary
-  .d-pad-l
-    padding-left: 30px
-  .d-pad-r
-    padding-right: 30px
