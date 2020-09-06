@@ -107,7 +107,6 @@ $input-focus-border-color: $dark
   background-color: rgba(0,0,0, .5)
 
 .welcome-title
-  font-family: 'Montserrat Bold'
   font-size: 80px
 
 .button-container
@@ -122,7 +121,6 @@ $input-focus-border-color: $dark
   text-decoration: none
   display: inline-block
   font-size: 20px
-  font-family: 'Montserrat Bold'
 
 .learn-more-button
   background-color: #AE0616
@@ -133,7 +131,6 @@ $input-focus-border-color: $dark
   text-decoration: none
   display: inline-block
   font-size: 22px
-  font-family: 'Montserrat SemiBold'
 
 .description-text
   font-family: 'Montserrat'
@@ -196,9 +193,18 @@ a.footer-link
 @import '~bulma/bulma.sass'
 
 //carousel on mobile
+@media only screen and (max-width: 500px)
+  .column.px-0.carousel-column
+    width: 400px
+    overflow: hidden
+    margin: 1rem
+  .slider-item
+    width: 400px
+  .slider-container
+    width: inherit!important
 
 
-@media only screen and (max-width: $tablet)
+@media only screen and (min-width: 500px)
   .column.px-0.carousel-column
     width: 350px
     overflow: hidden

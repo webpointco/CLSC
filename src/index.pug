@@ -1,5 +1,8 @@
 extends templates/page.pug
 
+block prepend header
+  - const page = "Home";
+
 block append styles 
   link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css")
   link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
@@ -9,11 +12,11 @@ block content
       .transparent-layer
         .container
           .hero-body
-            p.welcome-title.has-text-white.has-text-centered Welcome
+            h1.welcome-title.has-text-white.has-text-centered.has-text-weight-bold Welcome
             .button-container
               a.register-button Register Here
     
-    section.hero.is-medium.is-primary
+    section.hero.is-medium.is-light
       .container
         .hero-body.py-6
           .columns.carousel-text-container
