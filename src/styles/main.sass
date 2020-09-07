@@ -189,6 +189,11 @@ a.footer-link
 .slider-container
   width: inherit
 
+// about page
+.columns.reverse-order-on-mobile
+  display: flex
+  flex-direction: column
+
 //import bulma
 @import '~bulma/bulma.sass'
 
@@ -202,19 +207,27 @@ a.footer-link
     width: 400px
   .slider-container
     width: inherit!important
-
+  .columns.reverse-order-on-mobile
+    display: flex
+    flex-direction: column-reverse
 
 @media only screen and (min-width: 500px)
   .column.px-0.carousel-column
     width: 350px
     overflow: hidden
     margin: 1rem
+  .columns.reverse-order-on-mobile
+    display: flex
+    flex-direction: column-reverse
 
 @media only screen and (min-width: $tablet)
   .column.px-0.carousel-column
     overflow: hidden
     height: 350px
     width: 400px
+  .columns.reverse-order-on-mobile
+    display: flex
+    flex-direction: row
 
 @media only screen and (min-width: $desktop)
   .column.px-0.carousel-column
