@@ -6,35 +6,9 @@ $primary: #AE0616
 $dark: #4D4D4D
 
 //fonts/////////////////////////////////////////////
-@font-face
-  font-family: 'Montserrat'
-  font-style: normal
-  font-weight: normal
-  src: url('/fonts/Montserrat-Regular.ttf')
+// IMPORT FONTS LIKE THIS:
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap')
 
-@font-face
-  font-family: 'Montserrat Medium'
-  font-style: normal
-  font-weight: medium
-  src: url('/fonts/Montserrat-Medium.ttf')
-
-@font-face
-  font-family: 'Montserrat Bold'
-  font-style: normal
-  font-weight: bold
-  src: url('/fonts/Montserrat-Bold.ttf')
-
-@font-face
-  font-family: 'Montserrat SemiBold'
-  font-style: normal
-  font-weight: semi-bold
-  src: url('/fonts/Montserrat-SemiBold.ttf')
-
-@font-face
-  font-family: 'Montserrat SemiBold Italic'
-  font-style: italic
-  font-weight: semi-bold
-  src: url('/fonts/Montserrat-SemiBoldItalic.ttf')
 
 // TELL BULMA TO USE FONTS LIKE THIS (the rest of the list are Bulma's default fonts):
 $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
@@ -110,7 +84,7 @@ $input-focus-border-color: $dark
 // home page styling /////////////////////////////////////
 
 strong
-  font-family: Montserrat Bold
+  font-family: 'Montserrat'
 
 .has-home-background-img
   background-image: url(/images/hero-image.png)
@@ -121,7 +95,7 @@ strong
   background-color: rgba(0,0,0, .5)
 
 .welcome-title
-  font-family: 'Montserrat Bold'
+  font-family: 'Montserrat'
   font-size: 80px
 
 .button-container
@@ -136,7 +110,7 @@ strong
   text-decoration: none
   display: inline-block
   font-size: 20px
-  font-family: 'Montserrat Bold'
+  font-family: 'Montserrat'
 
 .learn-more-button
   background-color: #AE0616
@@ -147,7 +121,7 @@ strong
   text-decoration: none
   display: inline-block
   font-size: 22px
-  font-family: 'Montserrat SemiBold'
+  font-family: 'Montserrat'
 
 .description-text
   font-family: 'Montserrat'
@@ -211,36 +185,34 @@ a.footer-link
   width: inherit
 
 // registration page styling ////////////////////////////////
-.registration-banner-text
-  font-size: 60px
-  font-family: Montserrat Bold
-  color: white
-
 .hero-title
   font-size: 50px
-  font-family: Montserrat Bold
+  font-family: 'Montserrat'
   color: #4D4D4D
 
-.registration-text
-  font-size: 28px
-  font-family: Montserrat
-  color: #4D4D4D
-  padding-bottom: 50px
-
-.children-text
-  text-align: center
-  font-size: 30px
-  font-family: Montserrat Bold
+.underlined
   text-decoration: underline
+
+.slashed img
+  width: 110px
+
+.is-size-verybig
+  font-size: 80px
+
+.slashed p
+  margin-bottom: -50px
+
+.border-rightorbottom
+  border-right: 2px #4D4D4D solid
 
 .section-heading
   color: #4D4D4D
-  font-family: Montserrat Bold
+  font-family: 'Montserrat'
   font-size: 40px
 
 non-refundable
   color: $primary
-  font-family: Montserrat Bold
+  font-family: 'Montserrat'
 
 .list-text
   padding-left: 14px
@@ -249,11 +221,11 @@ non-refundable
   padding-left: 30px
 
 a.email
-  font-family: Montserrat SemiBold Italic
+  font-family: 'Montserrat'
   color: $primary
 
-a.link  
-  font-family: Montserrat Bold
+a.link
+  font-family: 'Montserrat'
   color: $primary
   text-decoration: underline
 
@@ -267,13 +239,15 @@ a.link
   text-decoration: none
   display: inline-block
   font-size: 20px
-  font-family: 'Montserrat Bold'
+  font-family: 'Montserrat'
 
 .button-text
   padding-top: 3px
   width: 60%
   position: relative
   left: 30%
+
+
 
 // USE BULMA AS A WHOLE LIKE THIS (before production, switch to modular to reduce size)
 @import '~bulma/bulma.sass'
@@ -339,6 +313,9 @@ a.link
   .center-child
     border-top: 2px solid #ccc
     border-bottom: 2px solid #ccc
+  .border-rightorbottom
+    border-right: none
+    border-bottom: 2px #4D4D4D solid
 
 // not on mobile //
 @media only screen and (min-width: $tablet)
