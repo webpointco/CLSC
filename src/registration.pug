@@ -2,3 +2,97 @@ extends templates/basicPage.pug
 
 block prepend header
   - const page = "Registration";
+
+block append content
+  section.hero.is-white
+    .hero-body
+      .container.px-6
+        p.is-size-2.has-text-dark.has-text-weight-bold.is-size-3-mobile 2020 Fall Semester
+        p.registration-text.is-size-4 Classes for CLSC’s fall semester will be held virtually because Howard County School facilities are closed from public use through 12/31/2020. All savings from the facility rental are being passed on to students and are reflected as a reduced tuition for the Fall semester.
+
+        .columns.has-text-weight-bold.has-text-centered.is-size-2.my-5
+          .column.border-rightorbottom
+            p.underlined.pb-5 1 child
+            .slashed
+              p.is-size-2 $280
+              img.slash-through(src="images/number-slash.svg")
+            p.is-size-verybig $230
+          .column.border-rightorbottom
+            p.underlined 2 children
+            p.is-size-4.pb-5 (per household)
+            .slashed
+              p.is-size-2 $490
+              img.slash-through(src="images/number-slash.svg")
+            p.is-size-verybig $420
+          .column
+            p.underlined 3 children
+            p.is-size-4.pb-5 (per household)
+            .slashed
+              p.is-size-2 $700
+              img.slash-through(src="images/number-slash.svg")
+            p.is-size-verybig $610
+      
+        p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile Payment Breakdown
+        ul.list-text.is-size-4.pb-6
+          li Tuition: #[strong $180]
+          li Registration fee: #[strong $30] #[non-refundable (NON-REFUNDABLE)]
+          li Materials fee: #[strong $20] #[non-refundable (NON-REFUNDABLE)]
+          p.py-3 * <strong>TUITION REFUND POLICY:</strong> Students who withdraw or are removed from CLSC on/before the 3rd week of class are eligible for a <strong>75% tuition refund.</strong> No refunds will be permitted after the third week of class.
+
+        p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile Adult Activity Class
+        p.registration-text.is-size-3.has-text-dark.has-text-weight-bold.py-2.is-size-4-mobile Tai Chi
+        .is-size-4.pb-6
+          p #[strong $90] per person per semester (#[strong $180] per year) / #[strong $60] per person per semester with student enrollment.
+          p Anyone #[strong over the age of 18] is eligible to enroll in our Tai Chi class.
+
+        p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile Eligibility
+        p.registration-text.is-size-4.pb-6 Any student between the ages of 4 and 18 at the beginning of the school year is eligible to enroll at CLSC. Exceptions may be made on an individual basis by the Principal, who is responsible for reviewing the enrollment application and placement of the students.
+
+        p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile New Student Trial Session
+        p.registration-text.is-size-4.pb-6 Prospective students can try out our classes at no cost. Please reach out to our Academic Dean at #[a.is-italic.has-text-weight-bold.has-text-primary(href="mailto:clsc.dean@clscweb.org") clsc.dean@clscweb.org] for further information.
+
+        p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile Late Registration / Entering School
+        p.registration-text.is-size-4 Students who enroll in CLSC four weeks after the semester’s start date will have their tuition pro-rated but will still pay for registration and material fees.
+
+  section.hero.is-light 
+    .hero-body
+      .container.px-6
+        p.is-size-1.has-text-weight-bold.pb-5.is-size-2-mobile How to Register
+        p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile New Students
+        p.registration-text.is-size-4 Families of new students need to download and complete the #[strong CLSC new student registration form] shown below. Once completed, please e-mail the form to our Principal at #[a.is-italic.has-text-weight-bold.has-text-primary(href="mailto:clsc.principcal@clscweb.org") principcal@clscweb.org]. Please reach out to the Principal should you have any questions. We will contact you after receipt and review of your form.
+        //red button
+        .column.is-one-third.has-text-centered.my-4.is-offset-one-third.py-6
+          a
+            .columns.has-background-primary.has-text-white.is-mobile
+              .column
+                i.fas.fa-cloud-download-alt.is-size-1.py-2.pr-0.mr-0
+              .column.is-two-thirds.has-text-weight-bold.py-2.px-2
+                p.is-size-4 New Student Register Here
+        p.registration-text.is-size-4.pb-5 Please contact the Principal at #[a.is-italic.has-text-weight-bold.has-text-primary(href="mailto:clsc.principcal@clscweb.org") principcal@clscweb.org] with any questions or concerns. We will contact you after your form is reviewed and approved.
+
+        p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile Current Students
+        p.registration-text.is-size-4 All families of returning students should register for a new semester using the #[a.has-text-primary.has-text-weight-bold Registration Form] shown below. This form can also be used to update your family information. If you need further assistance, please contact the CLSC Registrar via email at #[a.is-italic.has-text-weight-bold.has-text-primary(href="mailto:clsc.registrar@clscweb.org") clsc.registrar@clscweb.org]. Please include your #[strong Family ID] in the subject line.
+        //red button again
+        .column.is-one-third.has-text-centered.my-4.is-offset-one-third.pt-6.pb-4
+          a
+            .columns.has-background-primary.has-text-white.is-mobile
+              .column
+                i.fas.fa-link.is-size-1.py-2.pr-0.mr-0
+              .column.is-two-thirds.has-text-weight-bold.py-2.px-2
+                p.is-size-4 Current Student Register Here
+        p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile Payment
+
+        p.is-size-4.pb-4 CLSC accepts the following forms of payment.
+
+        p.is-size-3.has-text-dark.has-text-weight-bold.pb-2.is-size-4-mobile Zelle Transfer
+        .is-size-4.pb-4
+          p.pb-2 Instruction for payment by Zelle:
+          p.py-2 1) Send your payment to #[a.is-italic.has-text-weight-bold.has-text-primary(href="mailto:payment@clscweb.org") payment@clscweb.org]. 
+          p.py-2 2) Include your #[strong Family ID], the #[strong student(s) name], and your #[strong phone number] in the Comments section of the transfer form.
+          p.py-2 #[a.has-text-primary.has-text-weight-bold.underlined Click here] for instructions to set-up a Zelle payment.
+          p.is-size-4.px-5 * Note: CLSC encourages everyone to pay via Zelle. Accordingly, we offer a one-time rebate of $5 per family when they first pay by Zelle, which will be credited as a discount towards the following semester’s tuition.
+        
+        p.is-size-3.has-text-dark.has-text-weight-bold.pb-2.is-size-4-mobile Check
+        .is-size-4
+          p.pb-4 Please make your check payable to #[strong "Chinese Language School of Columbia"] or #[strong "CLSC"].
+          p #[strong Make sure to put your Family ID and child’s name on your check.] #[br] Mail your payment to #[em P.O. Box 1292, Ellicott City, MD 21041].
