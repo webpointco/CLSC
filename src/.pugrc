@@ -6,7 +6,7 @@
       ["Home", "/", "fas fa-home"],
       ["About Us", "/about-us.pug", "far fa-file-image", [
         ["Our Teachers", "/our-teachers.pug"],
-        ["School Leadership", "/school-leadership.pug"],
+        ["School Leadership", "/directors.pug"],
         ["Bylaws", "/bylaws.pug"]
       ]],
       ["Academics", "/academics.pug", "fas fa-graduation-cap", [
@@ -16,7 +16,9 @@
         ["Virtual Classroom Rules", "/virtual-classroom-rules.pug"],
         ["Learning Resources", "/learning-resources.pug"]
       ]],
-      ["Calendar", "/calendar.pug", "far fa-calendar-alt"],
+      ["Calendar", "/calendar.pug", "far fa-calendar-alt", [
+        ["Announcements", "/announcements.pug"]
+      ]],
       ["Registration", "/registration.pug", "fas fa-book"],
       ["Charitable Giving", "/charitable-giving.pug", "fas fa-gift"],
       ["Contact Us", "/contact-us.pug", "fas fa-envelope"]

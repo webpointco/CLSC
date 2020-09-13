@@ -7,23 +7,27 @@ block append styles
 block prepend header
   - let page = "Home"
 
+block append styles 
+  link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+
 block content
     section.hero.is-medium.has-home-background-img
-      .transparent-layeroo
+      .transparent-layer
         .container
           .hero-body
-            p.welcome-title.has-text-white.has-text-centered.has-text-weight-bold Welcome
+            h1.welcome-title.has-text-white.has-text-centered.has-text-weight-bold Welcome
             .button-container
-              a.register-button Register Here
+              a.register-button(href="/registration.pug") Register Here
     
-    section.hero.is-light
+    section.hero.is-medium.is-light
       .container
         .hero-body.py-6
-          .columns.is-desktop
-            .column.is-half.col-one
+          .columns.carousel-text-container
+            .column
               p.description-text #[strong The Chinese Language School of Columbia (CLSC)] was founded in 1975 in Howard County, MD. Since 2008, the school has been a proud partner of the Howard County Public School system. The school offers Chinese Language classes to both native and non-native speakers with emphasis on speaking Mandarin and writing traditional Chinese characters. Classes are held for two hours each Sunday afternoon and also includes cultural activities such as introduction to Chinese yo-yo, poetry, calligraphy, traditional cooking, and adult Tai-Chi.
 
-            .column.is-half.carousel-column.col-two
+            .column.is-half.px-0.carousel-column.mb-0
               // carousel
               .carousel#carousel-demo
                 .item-1
@@ -41,47 +45,27 @@ block content
                 .item-5
                   figure.image.is-3by2
                     img(src='images/Image5.JPG')
-          
+
           .button-container
             a.learn-more-button Learn More
     script(src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js")
     section
-      .map(id="map")
-      
-      script.
-          // Initialize and add the map
-          function initMap() {
-            // The location of Howard High School
-            var howardHighSchool = {lat: 39.226202, lng: -76.812409};
-            // The map, centered at Howard High School
-            var map = new google.maps.Map(document.getElementById('map'), {zoom: 16.7, center: howardHighSchool});
-          // The marker, positioned at Howard High School
-          var marker = new google.maps.Marker({position: howardHighSchool, map: map});
-          // initalize carousel
-          bulmaCarousel.attach('#carousel-demo', {
-            autoplay: true,
-            slidesToShow: 1,
-            navigationSwipe: true,
-            infinite: true
-          });
-         }
+     
+    script.
+        // initalize carousel
+        bulmaCarousel.attach('#carousel-demo', {
+          autoplay: true,
+          slidesToShow: 1,
+          navigationSwipe: true,
+          infinite: true,
+          breakpoints: [
+            { changePoint: 480, slidesToShow: 1, slidesToScroll: 1 }, 
+            { changePoint: 640, slidesToShow: 1, slidesToScroll: 1 }, 
+            { changePoint: 768, slidesToShow: 1, slidesToScroll: 1 } 
+          ]
+        });
 
-      script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYLXhDSP2OUR5HXKWgEmh0uRVNMNHm-bs&callback=initMap")
+block append content      
+  iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.743152643566!2d-76.81413608448952!3d39.22599873511235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7e01cf9870471%3A0x686d3e6588b4008!2s8700%20Old%20Annapolis%20Rd%2C%20Ellicott%20City%2C%20MD%2021043!5e0!3m2!1sen!2sus!4v1599409685902!5m2!1sen!2sus", width="100%", height="250", frameborder="0", style="border:0;", allowfullscreen="", aria-hidden="false", tabindex="0")
 
-block footer
-    section.hero.is-small.is-dark
-      .container
-        .hero-body
-          .columns
-            .column
-              p.footer-text 2020 @ Chinese Language School of Columbia. All Rights Reserved.
-              p.footer-text Website Created by #[a.footer-link WebPoint]
-              span.fab.fa-twitter-square
-
-            .column
-              p.footer-list-text #[Strong.footer-text School Address:] 8700 Old Annapolis Rd, Ellicott City MD, 21043
-              p.footer-list-text #[Strong.footer-text Mailing Address:] P.O. Box 1292 Ellicott City MD, 21041
-              p.footer-list-text #[Strong.footer-text Principal:] clsc.principal@clscweb.org
-              p.footer-list-text #[Strong.footer-text Dean:] clsc.dean@clcsweb.org
-              p.footer-list-text #[Strong.footer-text Registrar:] clsc.registrar@clscweb.org
-              
+ 

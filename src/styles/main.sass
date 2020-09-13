@@ -4,6 +4,11 @@
 $light: #EBEBEB
 $primary: #AE0616
 $dark: #4D4D4D
+//background gray
+$background-gray: #E8E8E8
+
+//update bulma variable
+$grey-light: $background-gray
 
 //fonts/////////////////////////////////////////////
 // IMPORT FONTS LIKE THIS:
@@ -11,6 +16,7 @@ $dark: #4D4D4D
 
 
 // TELL BULMA TO USE FONTS LIKE THIS (the rest of the list are Bulma's default fonts):
+
 $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
 $family-primary: 'Montserrat'
 
@@ -68,6 +74,9 @@ $input-background-color: #D2D2D2
 $input-radius: 1px
 $input-focus-border-color: $dark
 
+
+
+
 .btn-container
   display: flex
   justify-content: center
@@ -82,10 +91,6 @@ $input-focus-border-color: $dark
   box-shadow: none
 
 // home page styling /////////////////////////////////////
-
-strong
-  font-family: 'Montserrat'
-
 .has-home-background-img
   background-image: url(/images/hero-image.png)
 
@@ -95,7 +100,6 @@ strong
   background-color: rgba(0,0,0, .5)
 
 .welcome-title
-  font-family: 'Montserrat'
   font-size: 80px
 
 .button-container
@@ -110,7 +114,6 @@ strong
   text-decoration: none
   display: inline-block
   font-size: 20px
-  font-family: 'Montserrat'
 
 .learn-more-button
   background-color: #AE0616
@@ -121,7 +124,6 @@ strong
   text-decoration: none
   display: inline-block
   font-size: 22px
-  font-family: 'Montserrat'
 
 .description-text
   font-family: 'Montserrat'
@@ -140,8 +142,9 @@ strong
   color: white
   padding-bottom: 10px
 
-.footer-text
-  color: white
+
+strong
+  color: inherit
 
 a.footer-link
   color: #97AFFF
@@ -151,7 +154,7 @@ a.footer-link
   height: 250px
   width: 100%
 
-//carousel styling ///////////////////////////////////////
+//carousel styling
 .column.is-half.px-0.carousel-column
   overflow: hidden
   height: 440px
@@ -183,8 +186,8 @@ a.footer-link
 
 .slider-container
   width: inherit
-
-// registration page styling ////////////////////////////////
+  
+// registration page styling
 .underlined
   text-decoration: underline
 
@@ -218,10 +221,71 @@ ul.list-text
   padding-right: 8px
 
 
-// USE BULMA AS A WHOLE LIKE THIS (before production, switch to modular to reduce size)
+// about page
+.columns.reverse-order-on-mobile
+  display: flex
+  flex-direction: column
+
+//import bulma
 @import '~bulma/bulma.sass'
 
-// smaller than desktop //
+
+//carousel on mobile
+@media only screen and (max-width: 500px)
+  .column.px-0.carousel-column
+    width: 400px
+    overflow: hidden
+    margin: 1rem
+  .slider-item
+    width: 400px
+  .slider-container
+    width: inherit!important
+  .columns.reverse-order-on-mobile
+    display: flex
+    flex-direction: column-reverse
+
+@media only screen and (min-width: 500px)
+  .column.px-0.carousel-column
+    width: 350px
+    overflow: hidden
+    margin: 1rem
+  .columns.reverse-order-on-mobile
+    display: flex
+    flex-direction: column-reverse
+
+@media only screen and (min-width: $tablet)
+  .column.px-0.carousel-column
+    overflow: hidden
+    height: 350px
+    width: 400px
+  .columns.reverse-order-on-mobile
+    display: flex
+    flex-direction: row
+
+@media only screen and (min-width: $desktop)
+  .column.px-0.carousel-column
+    overflow: hidden
+    height: 400px
+    width: 500px
+  #navbar
+    display: flex
+    justify-content: center
+    margin: auto
+  .navbar-item a
+    border: 3px $light solid
+  .navbar-item a.is-active
+    border: 3px #cd9095 solid
+  #dropdownstyling
+    border: none
+  .cc-padding
+    padding: 3rem 1.5rem
+  .column.has-text-black.special-border
+    border-right: 6px solid $primary
+  .d-pad-l
+    padding-left: 30px
+  .d-pad-r
+    padding-right: 30px
+
 @media only screen and (max-width: $desktop)
   html, body
     display: block
@@ -243,7 +307,7 @@ ul.list-text
     padding-left: 0
   .d-pad-r
     padding-right: 0
-
+//below should be integrated with above
   .col-two
     width: 100%
     overflow: hidden
@@ -291,3 +355,4 @@ ul.list-text
   .center-child
     border-left: 2px solid #ccc
     border-right: 2px solid #ccc
+
