@@ -185,11 +185,6 @@ a.footer-link
   width: inherit
 
 // registration page styling ////////////////////////////////
-.hero-title
-  font-size: 50px
-  font-family: 'Montserrat'
-  color: #4D4D4D
-
 .underlined
   text-decoration: underline
 
@@ -205,40 +200,8 @@ a.footer-link
 .border-rightorbottom
   border-right: 2px #4D4D4D solid
 
-.section-heading
-  color: #4D4D4D
-  font-family: 'Montserrat'
-  font-size: 40px
-
 non-refundable
   color: $primary
-  font-family: 'Montserrat'
-
-.list-text
-  padding-left: 14px
-
-.note-text
-  padding-left: 30px
-
-a.email
-  font-family: 'Montserrat'
-  color: $primary
-
-a.link
-  font-family: 'Montserrat'
-  color: $primary
-  text-decoration: underline
-
-.registration-button
-  background-color: #AE0616
-  border: none
-  color: white
-  width: 35%
-  height: 70px
-  text-align: center
-  text-decoration: none
-  display: inline-block
-  font-size: 20px
   font-family: 'Montserrat'
 
 .button-text
@@ -247,6 +210,12 @@ a.link
   position: relative
   left: 30%
 
+ul.list-text
+  list-style: none
+
+.list-text li:before
+  content: "-"
+  padding-right: 8px
 
 
 // USE BULMA AS A WHOLE LIKE THIS (before production, switch to modular to reduce size)
