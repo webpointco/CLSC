@@ -186,7 +186,7 @@ a.footer-link
 
 .slider-container
   width: inherit
-  
+
 // registration page styling
 .underlined
   text-decoration: underline
@@ -243,6 +243,9 @@ ul.list-text
   .columns.reverse-order-on-mobile
     display: flex
     flex-direction: column-reverse
+  .border-rightorbottom
+    border-right: none
+    border-bottom: 2px #4D4D4D solid
 
 @media only screen and (min-width: 500px)
   .column.px-0.carousel-column
@@ -252,6 +255,9 @@ ul.list-text
   .columns.reverse-order-on-mobile
     display: flex
     flex-direction: column-reverse
+  .border-rightorbottom
+    border-right: none
+    border-bottom: 2px #4D4D4D solid
 
 @media only screen and (min-width: $tablet)
   .column.px-0.carousel-column
@@ -261,6 +267,9 @@ ul.list-text
   .columns.reverse-order-on-mobile
     display: flex
     flex-direction: row
+  .border-rightorbottom
+    border-right: 2px #4D4D4D solid
+    border-bottom: none
 
 @media only screen and (min-width: $desktop)
   .column.px-0.carousel-column
@@ -307,52 +316,3 @@ ul.list-text
     padding-left: 0
   .d-pad-r
     padding-right: 0
-//below should be integrated with above
-  .col-two
-    width: 100%
-    overflow: hidden
-    margin: 1rem
-    height: 100%
-
-// desktop or bigger //
-@media only screen and (min-width: $desktop)
-  #navbar
-    display: flex
-    justify-content: center
-    margin: auto
-  .navbar-item a
-    border: 3px $light solid
-  .navbar-item a.is-active
-    border: 3px #cd9095 solid
-  #dropdownstyling
-    border: none
-  .cc-padding
-    padding: 3rem 1.5rem
-  .column.has-text-black.special-border
-    border-right: 6px solid $primary
-  .d-pad-l
-    padding-left: 30px
-  .d-pad-r
-    padding-right: 30px
-
-  .col-two
-    width: 50%
-    overflow: hidden
-    margin: 1rem
-    height: 100%
-
-// on mobile //
-@media only screen and (max-width: $tablet)
-  .center-child
-    border-top: 2px solid #ccc
-    border-bottom: 2px solid #ccc
-  .border-rightorbottom
-    border-right: none
-    border-bottom: 2px #4D4D4D solid
-
-// not on mobile //
-@media only screen and (min-width: $tablet)
-  .center-child
-    border-left: 2px solid #ccc
-    border-right: 2px solid #ccc
-

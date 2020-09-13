@@ -3,8 +3,6 @@
   "version": "1.0.1",
   "description": "A simple Pug/SCSS boilerplate for WebPoint.",
   "dependencies": {
-    "@creativebulma/bulma-divider": "^1.1.0",
-    "bulma": "^0.9.0"
     "bulma": "^0.9.0",
     "bulma-carousel": "^4.0.4",
     "core-js": "^2.6.11"
