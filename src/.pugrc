@@ -34,5 +34,19 @@
       ["Name", "text"],
       ["Email", "email"],
     ],
+    activities: [
+      ["Chinese Cooking",
+        [
+          ["images/student-life/cooking-1.png", "is-5"],
+          ["images/student-life/cooking-2.jpg"],
+        ],
+      ],
+      ["Chinese Calligraphy",
+        [
+          ["images/student-life/calligraphy-1.png"],
+          ["images/student-life/calligraphy-2.png"]
+        ],
+      ]
+    ]
   }
 }

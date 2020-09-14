@@ -2,3 +2,21 @@ extends templates/basicPage.pug
 
 block prepend header
   - const page = "Student Life";
+
+block append content
+  .container.px-6.is-size-5
+    p.py-5 The Chinese language is intimately associated with Chinese history and culture. Understanding Chinese culture is essential for deeper understanding of the meaning of Chinese words and expressions. Besides teaching the Chinese language, CLSC also integrates cultural activities into our curriculum. As students explore the activities, they strengthen their experience with the Chinese culture and language in a positive and engaging way. CLSC offers cultural activities in a small group setting in and out of the classroom. Within the classroom, students learn Chinese poetry and music. Outside of the classroom, CLSC hosts a series of fun cultural activities, some of which are captured below.
+    .activity-column.column.is-10.is-offset-1
+      each activity in activities
+        - let [title, pictures] = activity
+        .has-background-light(style="margin-bottom: 40px;")
+          p.has-text-weight-bold.is-size-3.has-text-centered.py-4 #{title}
+          .columns.px-6.pb-4
+            each picture in pictures
+              - let [source, size] = picture
+              if size
+                .column(class=size)
+                  img.has-border-dark(src=source)
+              else
+                .column
+                  img.has-border-dark(src=source)
