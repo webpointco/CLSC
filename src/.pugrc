@@ -37,16 +37,39 @@
     activities: [
       ["Chinese Cooking",
         [
-          ["images/student-life/cooking-1.png", "is-5"],
+          ["images/student-life/cooking-1.png"],
           ["images/student-life/cooking-2.jpg"],
         ],
       ],
       ["Chinese Calligraphy",
         [
           ["images/student-life/calligraphy-1.png"],
-          ["images/student-life/calligraphy-2.png"]
+          ["images/student-life/calligraphy-2.png"],
         ],
-      ]
-    ]
+      ],
+      ["Chinese Brush Painting",
+        [
+          ["images/student-life/bruh-painting.jpg"],
+        ],
+      ],
+      ["Chinese Knotting",
+        [
+          ["images/student-life/knotting.png"],
+        ],
+      ],
+      ["Chinese Board Games",
+        [
+          ["images/student-life/mahjong.png"],
+          ["images/student-life/checkers.png"],
+          ["images/student-life/go.png"],
+        ],
+      ],
+      [null,
+        [
+          ["images/student-life/toys.jpg", "A Taiwanese dough figurine master provides instruction on the art form.", "is-size-6"],
+          ["images/student-life/tug-1.png", "And More!", "is-size-3 is-size-4-mobile"],
+        ],
+      ],
+    ],
   }
 }
