@@ -14,7 +14,7 @@
         ["Student Life", "/student-life.pug"],
         ["Classroom Rules", "/classroom-rules.pug"],
         ["Virtual Classroom Rules", "/virtual-classroom-rules.pug"],
-        ["Student Drawings", "/student-drawings.pug"]
+        ["Drawing Contest", "/drawing-contest.pug"]
       ]],
       ["Calendar", "/calendar.pug", "far fa-calendar-alt", [
         ["Announcements", "/announcements.pug"]
