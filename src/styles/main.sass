@@ -157,7 +157,7 @@ a.footer-link
 //carousel styling
 .column.is-half.px-0.carousel-column
   overflow: hidden
-  height: 440px
+  height: 400px
 
 .slider-container:focus
   outline: none
@@ -233,11 +233,13 @@ ul.list-text
 //carousel on mobile
 @media only screen and (max-width: 500px)
   .column.px-0.carousel-column
-    width: 400px
+    width: 350px
     overflow: hidden
     margin: 1rem
-  .slider-item
-    width: 400px
+  .slider-container
+    overflow: hidden
+  .carousel-column .slider-item
+    width: 350px!important
   .slider-container
     width: inherit!important
   .columns.reverse-order-on-mobile
@@ -246,6 +248,11 @@ ul.list-text
   .border-rightorbottom
     border-right: none
     border-bottom: 2px #4D4D4D solid
+  .column.px-0.carousel-column figure.image.is-3by2
+    width: 350px
+  .column.px-0.carousel-column img
+    width: inherit
+
 
 @media only screen and (min-width: 500px)
   .column.px-0.carousel-column
