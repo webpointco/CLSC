@@ -6,7 +6,7 @@
       ["Home", "/", "fas fa-home"],
       ["About Us", "/about-us.pug", "far fa-file-image", [
         ["Our Teachers", "/our-teachers.pug"],
-        ["School Leadership", "/directors.pug"],
+        ["School Leadership", "/school-leadership.pug"],
         ["Bylaws", "/bylaws.pug"]
       ]],
       ["Academics", "/academics.pug", "fas fa-graduation-cap", [
