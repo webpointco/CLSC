@@ -187,6 +187,20 @@ a.footer-link
 .slider-container
   width: inherit
 
+// student life styling
+.has-border-dark
+  border: 4px solid $dark
+
+.columns.px-6.pb-4.has-text-centered.sl-pictures .column img
+  height: 270px
+  object-fit: cover
+
+p.has-text-weight-bold.has-text-centered.pb-4.last-block
+  height: 80px
+
+.has-background-light.sl-blocks
+  margin-bottom: 40px
+
 // registration page styling
 .underlined
   text-decoration: underline
@@ -248,11 +262,12 @@ ul.list-text
   .border-rightorbottom
     border-right: none
     border-bottom: 2px #4D4D4D solid
+  p.has-text-weight-bold.has-text-centered.pb-4.last-block
+    height: inherit
   .column.px-0.carousel-column figure.image.is-3by2
     width: 350px
   .column.px-0.carousel-column img
     width: inherit
-
 
 @media only screen and (min-width: 500px)
   .column.px-0.carousel-column
@@ -265,6 +280,8 @@ ul.list-text
   .border-rightorbottom
     border-right: none
     border-bottom: 2px #4D4D4D solid
+  p.has-text-weight-bold.has-text-centered.pb-4.last-block
+    height: inherit
 
 @media only screen and (min-width: $tablet)
   .column.px-0.carousel-column
@@ -277,6 +294,8 @@ ul.list-text
   .border-rightorbottom
     border-right: 2px #4D4D4D solid
     border-bottom: none
+  p.has-text-weight-bold.has-text-centered.pb-4.last-block
+    height: 80px
 
 @media only screen and (min-width: $desktop)
   .column.px-0.carousel-column
