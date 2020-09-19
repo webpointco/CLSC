@@ -1,0 +1,8 @@
+extends templates/basicPage.pug
+
+block prepend header
+  - const page = "Directors";
+
+block append content
+  .container(style='padding: 1rem;')
+    iframe(src='https://docs.google.com/presentation/d/e/2PACX-1vQ5mhdPC8iCiVlUHVmNIaiX9CA2x5MDUTLcSXYl3HttPZ9iMmnI-ZxiOKfdDXteSpBsyd30qJEjnyXE/embed?start=false&loop=true&delayms=10000', frameborder='0', width='100%', style='height: -webkit-fill-available', allowfullscreen, mozallowfullscreen='true', webkitallowfullscreen='true')
