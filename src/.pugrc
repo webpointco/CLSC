@@ -9,7 +9,7 @@
         ["School Leadership", "/school-leadership.pug"],
         ["Bylaws", "/bylaws.pug"]
       ]],
-      ["Academics", "/academics.pug", "fas fa-graduation-cap", [
+      ["Academics", "/curriculum.pug", "fas fa-graduation-cap", [
         ["Curriculum", "/curriculum.pug"],
         ["Student Life", "/student-life.pug"],
         ["Classroom Rules", "/classroom-rules.pug"],
