@@ -3,7 +3,7 @@
   locals: {
     title: "Chinese Language School of Columbia",
     links: [
-      ["Home", "/", "fas fa-home"],
+      ["Home", "/index.pug", "fas fa-home"],
       ["About Us", "/about-us.pug", "far fa-file-image", [
         ["Our Teachers", "/our-teachers.pug"],
         ["School Leadership", "/school-leadership.pug"],
