@@ -8,14 +8,14 @@ block append content
     .columns.mb-0
       .column.is-three-fifths.is-size-5.pt-4.has-text-black
         p The <strong>Chinese Language School of Columbia (CLSC)</strong> is a 501(c)(3) nonprofit, apolitical organization that is led by a group of community volunteers, including parents of students who matriculate in the school. Volunteers hold distinct positions such as Principal, Academic Dean, the Board of Directors (BoD), and a separate Board of Trustees (BoT), who oversee activities of the BoD.
-        p.pt-5 The ability of CLSC to carry its mission is completely dependent on tuition revenue, volunteer efforts from the school community and the gracious support of donors. We hope you will support our mission by donating to our school today.  
+        p.pt-5 The ability of CLSC to carry its mission is completely dependent on tuition revenue, volunteer efforts from the school community and the gracious support of donors. We hope you will support our mission by donating to our school today.
       .column.is-two-fifths
         img.is-3by4.px-3(src='images/CLSC-Heart.svg', alt='Hand holding a heart')
     h1.is-size-2.has-text-weight-bold.has-text-centered.has-text-black Donate Here
     .columns.is-centered
       .column.has-text-centered.my-5.has-text-white
-        button.button.is-large.paypal.mx-4.has-text-white.my-2 <i class="fab fa-paypal"></i> &nbsp PayPal
-        button.button.is-large.zelle.mx-4.has-text-white.my-2 <img src="images/ZelleApp_Icon.png" width="30rem"> &nbsp Zelle
+        a.button.is-large.paypal.mx-4.has-text-white.my-2 <i class="fab fa-paypal"></i> &nbsp PayPal
+        a.button.is-large.zelle.mx-4.has-text-white.my-2(href='#payment') <img src="images/ZelleApp_Icon.png" width="30rem"> &nbsp Zelle
   section.has-background-light
     .container.px-6
       .columns.py-6.is-size-5
@@ -37,7 +37,11 @@ block append content
           p.has-text-weight-bold Raytheon Technologies
           p.has-text-weight-bold Merck & Co.
           p.has-text-weight-bold Clorox
-  .container.px-6
+  #payment.container.px-6
+    .py-5.has-text-black
+      h1.is-size-3.has-text-weight-bold.is-size-4-mobile Zelle Transfer
+    .is-size-5.pb-4
+      p.py-2 1) Send your payment to #[a.is-italic.has-text-weight-bold.has-text-primary(href='mailto:payment@clscweb.org') payment@clscweb.org] via Zelle. 
     .py-5.has-text-black
       h1.is-size-3.has-text-weight-bold.is-size-4-mobile Grants
       p.is-size-5 CLSC has received <em>unrestricted educational grants</em> from:
