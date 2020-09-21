@@ -14,8 +14,8 @@ block append content
     h1.is-size-2.has-text-weight-bold.has-text-centered.has-text-black Donate Here
     .columns.is-centered
       .column.has-text-centered.my-5.has-text-white
-        button.button.is-large.paypal.mx-4.has-text-white.my-2 <i class="fab fa-paypal"></i> &nbsp PayPal
-        button.button.is-large.zelle.mx-4.has-text-white.my-2 <img src="images/ZelleApp_Icon.png" width="30rem"> &nbsp Zelle
+        a.button.is-large.paypal.mx-4.has-text-white.my-2 <i class="fab fa-paypal"></i> &nbsp PayPal
+        a.button.is-large.zelle.mx-4.has-text-white.my-2(href='#payment') <img src="images/ZelleApp_Icon.png" width="30rem"> &nbsp Zelle
   section.has-background-light
     .container.px-6
       .columns.py-6.is-size-5
@@ -37,10 +37,15 @@ block append content
           p.has-text-weight-bold Raytheon Technologies
           p.has-text-weight-bold Merck & Co.
           p.has-text-weight-bold Clorox
-  .container.px-6
+  #payment.container.px-6
+    .py-5.has-text-black
+      h1.is-size-3.has-text-weight-bold.is-size-4-mobile Zelle Transfer
+    .is-size-5.pb-4
+      p.py-2 1) Send your payment to #[a.is-italic.has-text-weight-bold.has-text-primary(href='mailto:payment@clscweb.org') payment@clscweb.org] via Zelle. 
     .py-5.has-text-black
       h1.is-size-3.has-text-weight-bold.is-size-4-mobile Grants
       p.is-size-5 CLSC has received <em>unrestricted educational grants</em> from:
       p.is-size-5 The Taipei Economic and Culture Representative Office (TECRO) in the United States.
     .my-4.px-2.has-text-primary.has-text-weight-bold.is-size-5.has-text-centered.red-border.is-size-4-mobile
       em We thank all our community contributors and invite you to support our important mission.
+      
