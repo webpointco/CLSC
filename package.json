@@ -1,6 +1,6 @@
 {
   "name": "webpoint-boilerplate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple Pug/SCSS boilerplate for WebPoint.",
   "dependencies": {
     "bulma": "^0.9.0",
