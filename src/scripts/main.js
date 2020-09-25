@@ -36,12 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Check if there are any navbar burgers
   if ($dropContainers.length > 0) {
-    console.log($dropContainers[1]);
     // Add a click event on each of them
     $dropContainers.forEach( el => {
       el.addEventListener("click", () => {
         let source = el.getAttribute("href");
-        console.log(source);
         let target = "";
         if (source === "/about-us.pug") {
           // Get the target from the "data-target" attribute

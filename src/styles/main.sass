@@ -287,8 +287,7 @@ ul.list-text
     display: block
   .navbar-link:not(.is-arrowless)::after
     display: none
-  .below-others
-    z-index: 0
+
   //.column.px-0.carousel-column figure.image.is-3by2
   //  width: 350px
   //.column.px-0.carousel-column img
@@ -314,8 +313,6 @@ ul.list-text
     display: block
   .navbar-link:not(.is-arrowless)::after
     display: none
-  .below-others
-    z-index: 0
 
 @media only screen and (min-width: $tablet)
   //.column.px-0.carousel-column
@@ -334,6 +331,8 @@ ul.list-text
     display: none
     width: 0
   .column.is-one-third.is-flex.py-0.my-0 i
+    display: none
+  .navbar-dropdown.mobile-onclick
     display: none
 
 
@@ -362,8 +361,8 @@ ul.list-text
     padding-right: 30px
   .navbar-link:not(.is-arrowless)::after
     display: block
-  .below-others
-    z-index: -1
+  .above-others
+    z-index: 2
   .columns.is-mobile.py-0.my-0.navbar-item
     padding: 0
 
