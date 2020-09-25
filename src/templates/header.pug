@@ -14,15 +14,19 @@ nav.has-background-light.navbar(role='navigation', aria-label='main navigation')
   .navbar-menu#navbar
     .navbar-item
       each link in links
-        - let [name, url, icon, dropdown] = link;
+        - let [name, url, icon, dropdown, id] = link;
           if dropdown
-            .navbar-item.has-dropdown.is-hoverable(href=url)
-              a.navbar-link(href=url) #{name}
-              .navbar-dropdown
+            .navbar-item.has-dropdown.is-hoverable.is-size-4-touch.drop-container(href=url)
+              .columns.is-mobile.py-0.my-0.navbar-item
+                .column.py-0.my-0.px-1
+                  a.navbar-link(href=url) #{name}
+                .column.is-flex.py-0.my-0.px-0.is-hidden-desktop
+                  i.fas.fa-chevron-down.pr-5.has-text-primary
+              .navbar-dropdown(id=id)
                 each option in dropdown
                   - let [title, target] = option;
-                  a.navbar-item#dropdownstyling(href=target) #{title}
+                  a.navbar-item.is-size-5-mobile#dropdownstyling(href=target) #{title}
           else
-            a.navbar-item(class={'is-active': page === name}, href=url)
+            a.navbar-item.above-others(class={'is-active': page === name}, href=url)
               i.has-text-primary.is-hidden-touch(class=[icon]) &nbsp
               p.is-size-4-touch #{name}
