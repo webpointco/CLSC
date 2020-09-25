@@ -8,17 +8,20 @@
         ["Our Teachers", "/our-teachers.pug"],
         ["School Leadership", "/school-leadership.pug"],
         ["Bylaws", "/bylaws.pug"]
-      ]],
+      ], "about-dropdown"
+      ],
       ["Academics", "/curriculum.pug", "fas fa-graduation-cap", [
         ["Curriculum", "/curriculum.pug"],
         ["Student Life", "/student-life.pug"],
         ["Classroom Rules", "/classroom-rules.pug"],
         ["Virtual Classroom Rules", "/virtual-classroom-rules.pug"],
         ["Drawing Contest", "/drawing-contest.pug"]
-      ]],
+      ], "academics-dropdown",
+      ],
       ["Calendar", "/calendar.pug", "far fa-calendar-alt", [
         ["Announcements", "/announcements.pug"]
-      ]],
+      ], "calendar-dropdown",
+      ],
       ["Registration", "/registration.pug", "fas fa-book"],
       ["Charitable Giving", "/charitable-giving.pug", "fas fa-gift"],
       ["Contact Us", "/contact-us.pug", "fas fa-envelope"]

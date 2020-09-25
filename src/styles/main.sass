@@ -31,6 +31,11 @@ $family-primary: 'Montserrat'
   width: 500px
   margin: auto
 
+.is-flex
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
 $navbar-item-hover-color: $primary
 $navbar-item-hover-background-color: none
 $navbar-dropdown-background-color: $light
@@ -267,7 +272,7 @@ ul.list-text
   //  width: 350px!important
   //.slider-container
   //  width: inherit!important
-  
+
   .columns.reverse-order-on-mobile
     display: flex
     flex-direction: column-reverse
@@ -276,6 +281,14 @@ ul.list-text
     border-bottom: 2px #4D4D4D solid
   p.has-text-weight-bold.has-text-centered.pb-4.last-block
     height: inherit
+  .navbar-dropdown
+    display: none
+  .navbar-dropdown.mobile-onclick
+    display: block
+  .navbar-link:not(.is-arrowless)::after
+    display: none
+  .below-others
+    z-index: 0
   //.column.px-0.carousel-column figure.image.is-3by2
   //  width: 350px
   //.column.px-0.carousel-column img
@@ -295,6 +308,14 @@ ul.list-text
     border-bottom: 2px #4D4D4D solid
   p.has-text-weight-bold.has-text-centered.pb-4.last-block
     height: inherit
+  .navbar-dropdown
+    display: none
+  .navbar-dropdown.mobile-onclick
+    display: block
+  .navbar-link:not(.is-arrowless)::after
+    display: none
+  .below-others
+    z-index: 0
 
 @media only screen and (min-width: $tablet)
   //.column.px-0.carousel-column
@@ -309,6 +330,12 @@ ul.list-text
     border-bottom: none
   p.has-text-weight-bold.has-text-centered.pb-4.last-block
     height: 80px
+  .column.is-one-third.is-flex.py-0.my-0
+    display: none
+    width: 0
+  .column.is-one-third.is-flex.py-0.my-0 i
+    display: none
+
 
 @media only screen and (min-width: $desktop)
   //.column.px-0.carousel-column
@@ -333,6 +360,12 @@ ul.list-text
     padding-left: 30px
   .d-pad-r
     padding-right: 30px
+  .navbar-link:not(.is-arrowless)::after
+    display: block
+  .below-others
+    z-index: -1
+  .columns.is-mobile.py-0.my-0.navbar-item
+    padding: 0
 
 @media only screen and (max-width: $desktop)
   html, body
