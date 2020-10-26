@@ -4,5 +4,5 @@ block prepend header
   - const page = "Our Teachers";
 
 block append content
-  .container(style='padding: 1rem;')
-    iframe(src='https://docs.google.com/presentation/d/e/2PACX-1vR9VcV224iVHobk5gA-JpNKH8DrxWMpFpOvmG0M_ammOingxlJuFJ6ObnlXlVf1-B8qQ9iCt6LOYVqv/embed?start=true&loop=true&delayms=10000', frameborder='0', width='100%', style='height: 100%; height: -webkit-fill-available', allowfullscreen, mozallowfullscreen='true', webkitallowfullscreen='true')
+  .container(style='padding: 1rem; display:flex; justify-content: center;align-items: center;')
+    iframe.slides(src='https://docs.google.com/presentation/d/e/2PACX-1vR9VcV224iVHobk5gA-JpNKH8DrxWMpFpOvmG0M_ammOingxlJuFJ6ObnlXlVf1-B8qQ9iCt6LOYVqv/embed?start=false&loop=true&delayms=10000', frameborder='0', allowfullscreen, mozallowfullscreen='true', webkitallowfullscreen='true')
