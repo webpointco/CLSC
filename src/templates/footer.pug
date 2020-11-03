@@ -1,10 +1,11 @@
 footer.footer.f-mobile
+  script(src='/scripts/main.js')
   .container.is-centered
     .columns.has-text-white.has-text-centered-mobile
       .column
         content
           p.py-1 #{new Date().getFullYear()} @ Chinese Language School of Columbia. All Rights Reserved.
-          p.py-1 Website created by #[a(href='https://github.com/webpointco') WebPoint]
+          p.py-1 Website created by #[a.footer-link(href='https://github.com/webpointco') WebPoint]
           br
           // icons need to be linked to the actual socials!
           .socials.is-size-1.is-hidden-touch

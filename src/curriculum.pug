@@ -1,0 +1,8 @@
+extends templates/basicPage.pug
+
+block prepend header
+  - const page = "Curriculum";
+
+block append content
+  .container
+    iframe(src='https://docs.google.com/document/d/e/2PACX-1vRTDILMHVWJD-G8-D0ptalKPSWxDP6Jdsz3V-_p__4rEeKVL3YT9Dy2vXbr1mU7HNCSBW9F276qlOxc/pub', width='100%', style='height: 100%; height: -webkit-fill-available')

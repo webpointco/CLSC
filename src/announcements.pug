@@ -1,0 +1,8 @@
+extends templates/basicPage.pug
+
+block prepend header
+  - const page = "Annoucements";
+
+block append content
+  .container
+    iframe(src='https://docs.google.com/document/d/e/2PACX-1vTEIzhgG1s6iyR6boRq1Sb7lFovhpc3Y2Lwd58tpsRNytl3tgz0o2ou4ICUtgE92g/pub?', width='100%', style='height: 100%; height: -webkit-fill-available')
