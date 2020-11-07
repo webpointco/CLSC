@@ -365,7 +365,8 @@ ul.list-text
     width: 0
   .column.is-one-third.is-flex.py-0.my-0 i
     display: none
-  .navbar-dropdown.mobile-onclick
+
+  .navbar-link:not(.is-arrowless)::after
     display: none
 
 
@@ -398,6 +399,8 @@ ul.list-text
     z-index: 2
   .columns.is-mobile.py-0.my-0.navbar-item
     padding: 0
+  .navbar-dropdown.mobile-onclick
+    display: none
 
 @media only screen and (max-width: $desktop)
   html, body
