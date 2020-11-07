@@ -8,7 +8,7 @@
     "core-js": "^2.6.11"
   },
   "scripts": {
-    "build": "npx parcel build src/index.pug -d dist --no-source-maps --public-url ./",
+    "build": "npx del-cli dist & npx parcel build src/index.pug -d dist --no-source-maps --public-url ./",
     "start": "npx parcel src/index.pug",
     "test": "npx pug-lint src & npx eslint src & npx parcel build src/index.pug -d .temp --log-level 2 --cache-dir .temp/.cache & npx del-cli .temp"
   },
