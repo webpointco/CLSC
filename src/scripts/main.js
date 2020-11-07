@@ -40,28 +40,28 @@ document.addEventListener("DOMContentLoaded", () => {
     $dropContainers.forEach( el => {
       el.addEventListener("click", () => {
         let source = el.getAttribute("href");
-        let target = "";
+        //let target = "";
         if (source === "/about-us.pug") {
           // Get the target from the "data-target" attribute
           const $target = document.getElementById(dropdownTargets[0]);
           // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
           el.classList.toggle("mobile-onclick");
           $target.classList.toggle("mobile-onclick");
-        };
+        }
         if (source === "/curriculum.pug") {
           // Get the target from the "data-target" attribute
           const $target = document.getElementById(dropdownTargets[1]);
           // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
           el.classList.toggle("mobile-onclick");
           $target.classList.toggle("mobile-onclick");
-        };
+        }
         if (source === "/calendar.pug") {
           // Get the target from the "data-target" attribute
           const $target = document.getElementById(dropdownTargets[2]);
           // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
           el.classList.toggle("mobile-onclick");
           $target.classList.toggle("mobile-onclick");
-        };
+        }
       });
     });
   }
