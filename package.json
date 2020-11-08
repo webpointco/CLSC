@@ -8,9 +8,10 @@
     "core-js": "^2.6.11"
   },
   "scripts": {
-    "build": "npx del-cli dist & npx parcel build src/index.pug -d dist --no-source-maps --public-url ./",
+    "build": "npx parcel build src/index.pug -d dist --no-source-maps --public-url ./",
     "start": "npx parcel src/index.pug",
-    "test": "npx pug-lint src & npx eslint src & npx parcel build src/index.pug -d .temp --log-level 2 --cache-dir .temp/.cache & npx del-cli .temp"
+    "test": "npx pug-lint src & npx eslint src & npx parcel build src/index.pug -d .temp --log-level 2 --cache-dir .temp/.cache & npx del-cli .temp",
+    "deploy": "npx del-cli dist & git clone -b deploy --single-branch https://github.com/webpointco/CLSC.git dist & npx del-cli \"dist/*\" \"!dist/.git\" & npm run build & cd dist & git add -A & git commit -m \"%npm_config_message%\" & git push & cd ../"
   },
   "repository": {
     "type": "git",

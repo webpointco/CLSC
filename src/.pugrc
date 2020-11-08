@@ -2,6 +2,7 @@
   pretty: true,
   locals: {
     title: "Chinese Language School of Columbia",
+    absoluteUrl: "https://webpoint.dev/CLSC/",
     links: [
       ["Home", "/index.pug", "fas fa-home"],
       ["About Us", "/about-us.pug", "far fa-file-image", [
