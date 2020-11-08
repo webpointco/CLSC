@@ -10,7 +10,7 @@
   "scripts": {
     "build": "npx parcel build src/index.pug -d dist --no-source-maps --public-url ./",
     "start": "npx parcel src/index.pug",
-    "test": "npx pug-lint src & npx eslint src & parcel build src/index.pug -d .temp --log-level 2 --cache-dir .temp/.cache & npx del-cli .temp",
+    "test": "npx pug-lint src & npx eslint src & npx parcel build src/index.pug -d .temp --log-level 2 --cache-dir .temp/.cache & npx del-cli .temp",
     "deploy": "npx del-cli dist & git clone -b deploy --single-branch https://github.com/webpointco/CLSC.git dist & npx del-cli \"dist/*\" \"!dist/.git\" & npm run build & cd dist & git add -A & git commit -m \"%npm_config_message%\" & git push & cd ../"
   },
   "repository": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/agoldstein03/WebPoint-Boilerplate#readme",
   "devDependencies": {
+    "autoprefixer": "^9.8.6",
     "del-cli": "^3.0.1",
     "eslint": "^7.4.0",
     "parcel-bundler": "^1.12.4",
