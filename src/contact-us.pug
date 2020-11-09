@@ -10,11 +10,11 @@ block append scripts
         subject = document.getElementById("subject"),
         submit = document.getElementById("submit"),
         emails = {
-            "Registration": "webpointexecs@gmail.com",
-            "Curriculum": "webpointexecs@gmail.com",
-            "About School": "webpointexecs@gmail.com",
+            "Registration": "clsc.registrar@clscweb.org",
+            "Curriculum": "clsc.dean@clscweb.org",
+            "About School": "clsc.principal@clscweb.org",
             "Website": "webpointexecs@gmail.com",
-            "Other": "webpointexecs@gmail.com"
+            "Other": "clsc.connect@clscweb.org"
         };
       submit.addEventListener("click", () => {
           form.action = "https://formsubmit.co/"+emails[subject.value];
