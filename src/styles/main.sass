@@ -13,9 +13,8 @@ $grey-light: $background-gray
 
 //fonts/////////////////////////////////////////////
 // IMPORT FONTS LIKE THIS:
+@import "../node_modules/@glidejs/glide/src/assets/sass/glide.core"
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap')
-
-
 // TELL BULMA TO USE FONTS LIKE THIS (the rest of the list are Bulma's default fonts):
 
 $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
@@ -126,6 +125,10 @@ $input-focus-border-color: $dark
 .button-container
   text-align: center
 
+section.about-page
+  margin-top: 40px
+  margin-bottom: 40px
+
 .register-button
   background-color: #AE0616
   border: none
@@ -150,6 +153,7 @@ $input-focus-border-color: $dark
   font-family: 'Montserrat'
   font-size: 23px
   color: #4D4D4D
+  margin-right: 25px
 
 .footer-text
   font-family: 'Montserrat'
