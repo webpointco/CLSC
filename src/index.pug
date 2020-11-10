@@ -28,18 +28,14 @@ block content
 
             .column.is-half.px-0.carousel-column.mb-0
               .carousel
-                img.slide.transition(src='/images/Image1.JPG', style='width:100%', alt='')
-                img.slide.transition(src='/images/Image2.JPG', style='width:100%', alt='')
-                img.slide.transition(src='/images/Image3.JPG', style='width:100%', alt='')
-                img.slide.transition(src='/images/Image4.JPG', style='width:100%', alt='')
-                a.prev-btn(onclick='nextSlide(-1)') &#x276E;
-                a.next-btn(onclick='nextSlide(1)') &#x276F;
+                for i in [1, 2, 3, 4]
+                  img.slide.transition(src=`/images/Image${i}.JPG`, style='width:100%', alt='Photo of school children')
+                a.prev-btn &#x276E;
+                a.next-btn &#x276F;
                 br
                 div(name='all-clickers', style='text-align:center')
-                  span.clicker(onclick='displaySlide(1)')
-                  span.clicker(onclick='displaySlide(2)')
-                  span.clicker(onclick='displaySlide(3)')
-                  span.clicker(onclick='displaySlide(4)')
+                  for i in [1, 2, 3, 4]
+                    span.clicker
 
     //script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous')
     //script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo', crossorigin='anonymous')
@@ -67,16 +63,24 @@ block content
           slideIndex = slideNum.length
         }
         var i;
-        for (i = 0; i < slideNum.length; i++) {
+        for (let i = 0; i < slideNum.length; i++) {
             slideNum[i].style.display = "none";
         }
         var clickers = document.getElementsByClassName("clicker");
-        for (i = 0; i < clickers.length; i++) {
+        for (let i = 0; i < clickers.length; i++) {
             clickers[i].className = clickers[i].className.replace(" current", "");
         }
         slideNum[slideIndex-1].style.display = "block";
         clickers[slideIndex-1].className += " current";
       }
+
+      var clickers = document.getElementsByClassName("clicker");
+      for (let i = 0; i < clickers.length; i++) {
+        clickers[i].addEventListener("click", () => displaySlide(i + 1));
+      }
+
+      document.querySelector(".prev-btn").addEventListener("click", () => nextSlide(-1));
+      document.querySelector(".next-btn").addEventListener("click", () => nextSlide(1));
 
 block append content
   iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.743152643566!2d-76.81413608448952!3d39.22599873511235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7e01cf9870471%3A0x686d3e6588b4008!2s8700%20Old%20Annapolis%20Rd%2C%20Ellicott%20City%2C%20MD%2021043!5e0!3m2!1sen!2sus!4v1599409685902!5m2!1sen!2sus', width='100%', height='250', frameborder='0', style='border:0;', allowfullscreen='', aria-hidden='false', tabindex='0')
