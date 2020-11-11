@@ -8,9 +8,6 @@ footer.footer.f-mobile
           p.py-1 Website created by #[a.footer-link(href='https://webpoint.dev/', target = 'blank') WebPoint]
           br
           //- icons need to be linked to the actual socials!
-          .socials.is-size-1.is-hidden-touch
-            i.fab.fa-facebook-square.pr-3
-            i.fab.fa-twitter-square.px-3
       .column
         each contact in contacts
           - let [target, info] = contact;
@@ -20,7 +17,3 @@ footer.footer.f-mobile
             span #{info}
             br
       .column.is-hidden-desktop
-        //- icons need to be linked to the actual socials!
-        .socials.is-size-1.is-large-mobile
-          i.fab.fa-facebook-square.pr-3
-          i.fab.fa-twitter-square.px-3
