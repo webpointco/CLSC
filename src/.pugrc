@@ -1,6 +1,7 @@
 {
   pretty: true,
   locals: {
+    lang: "en",
     title: "Chinese Language School of Columbia",
     links: [
       ["Home", "/", "fas fa-home"],

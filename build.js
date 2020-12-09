@@ -1,7 +1,7 @@
 const fs = require("fs"),
   JSON5 = require("json5"),
   nodeEval = require("node-eval"),
-//  path = require("path"),
+  path = require("path"),
   PugBundler = require("pug-bundler"),
   PugCompileAsset = require("./PugCompileAsset");
 
@@ -28,9 +28,11 @@ new PugBundler({
     PugCompileAsset
   ],
   handleWrite: file => {
+    const relativePath = path.relative("src", file.path.replace(".pug.js", ".html"));
     if (file.type === "pug") {
-      files.push({path: file.path, contents: file.contents.toString(), relativePath: file.relativePath.replace(".pug", ".html")});
+      files.push({path: file.path, contents: file.contents.toString(), relativePath});
     }
+    return relativePath;
   },
   sass: {
     includePaths: ["node_modules"]
@@ -60,24 +62,49 @@ new PugBundler({
 
 new PugBundler({
   files: [
-    //"src/index.pug"
     "src"
-    /*"src/index.pug",
-    "src/about-us.pug",
-    "src/portfolio.pug",
-    "src/contact.pug"*/
   ],
   exclude: [
     "src/.pugrc",
     "src/templates"
   ],
+  handleWrite: file => {
+    const finalPath = path.resolve("dist", path.relative("src", file.path.replace(".html", "_en.html")));
+    fs.mkdirSync(path.dirname(finalPath), {recursive: true});
+    fs.writeFileSync(finalPath, file.contents);
+    return finalPath;
+  },
   sass: {
     includePaths: ["node_modules"]
-//    includePaths: [path.resolve("node_modules")]
   },
   pug: {
     importedPugOptions,
-    ...importedPugOptions.locals
+    ...importedPugOptions.locals,
+    lang: "en"
+  }
+});
+
+new PugBundler({
+  files: [
+    "src"
+  ],
+  exclude: [
+    "src/.pugrc",
+    "src/templates"
+  ],
+  handleWrite: file => {
+    const finalPath = path.resolve("dist", path.relative("src", file.path.replace(".html", "_zh.html")));
+    fs.mkdirSync(path.dirname(finalPath), {recursive: true});
+    fs.writeFileSync(finalPath, file.contents);
+    return finalPath;
+  },
+  sass: {
+    includePaths: ["node_modules"]
+  },
+  pug: {
+    importedPugOptions,
+    ...importedPugOptions.locals,
+    lang: "zh"
   }
 });
 

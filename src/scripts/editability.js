@@ -14,7 +14,7 @@ document.getElementById("preview").addEventListener("click", () => {
   }
   locals.DEV = false;
   document.getElementById("previewFrame").srcdoc = (new Function(
-    out.files.find(file => (new URL(location).pathname === new URL(file.relativePath, location).pathname)).contents+
+    out.files.find(file => (new URL(location.href.replace("_en", "").replace("_zh", "").replace(".html", "")).pathname === new URL(file.relativePath.replace("_en", "").replace("_zh", "").replace(".html", ""), location).pathname)).contents+
     ";return template")
   )()(locals);
 });
