@@ -13,7 +13,7 @@ nav.has-background-light.navbar(role='navigation', aria-label='main navigation')
       span(aria-hidden='true')
   .navbar-menu#navbar
     .navbar-item
-      each link in links
+      each link, index in links
         - let [name, url, icon, dropdown, id] = link;
           if dropdown
             .navbar-item.has-dropdown.is-hoverable.is-size-4-touch.drop-container(href=url)
