@@ -8,7 +8,7 @@ const fs = require("fs"),
 const files = [],
   attrs = new Set(),
   importedPugOptions = JSON5.parse(fs.readFileSync("src/.pugrc"));
-  
+
 importedPugOptions.locals.DEV = true;
 
 new PugBundler({
@@ -69,7 +69,7 @@ new PugBundler({
     "src/templates"
   ],
   handleWrite: file => {
-    const finalPath = path.resolve("dist", path.relative("src", file.path.replace(".html", "_en.html")));
+    const finalPath = path.resolve("dist", path.relative("src", file.path/*.replace(".html", "_en.html")*/));
     fs.mkdirSync(path.dirname(finalPath), {recursive: true});
     fs.writeFileSync(finalPath, file.contents);
     return finalPath;
@@ -84,29 +84,29 @@ new PugBundler({
   }
 });
 
-new PugBundler({
-  files: [
-    "src"
-  ],
-  exclude: [
-    "src/.pugrc",
-    "src/templates"
-  ],
-  handleWrite: file => {
-    const finalPath = path.resolve("dist", path.relative("src", file.path.replace(".html", "_zh.html")));
-    fs.mkdirSync(path.dirname(finalPath), {recursive: true});
-    fs.writeFileSync(finalPath, file.contents);
-    return finalPath;
-  },
-  sass: {
-    includePaths: ["node_modules"]
-  },
-  pug: {
-    importedPugOptions,
-    ...importedPugOptions.locals,
-    lang: "zh"
-  }
-});
+// new PugBundler({
+//   files: [
+//     "src"
+//   ],
+//   exclude: [
+//     "src/.pugrc",
+//     "src/templates"
+//   ],
+//   handleWrite: file => {
+//     const finalPath = path.resolve("dist", path.relative("src", file.path.replace(".html", "_zh.html")));
+//     fs.mkdirSync(path.dirname(finalPath), {recursive: true});
+//     fs.writeFileSync(finalPath, file.contents);
+//     return finalPath;
+//   },
+//   sass: {
+//     includePaths: ["node_modules"]
+//   },
+//   pug: {
+//     importedPugOptions,
+//     ...importedPugOptions.locals,
+//     lang: "zh"
+//   }
+// });
 
 function tryEval(code) {
   try {
