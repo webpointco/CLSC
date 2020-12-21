@@ -4,8 +4,7 @@
     title: "Chinese Language School of Columbia",
     absoluteUrl: "https://webpoint.dev/CLSC/",
     "home": {
-        paragraphBold: "The Chinese Language School of Columbia (CLSC)",
-        paragraphNonbold: " was founded in 1975 in Howard County, MD. Since 2008, the school has been a proud partner of the Howard County Public School System. The school offers Chinese language classes to both native and non-native speakers with emphasis on speaking Mandarin and writing traditional Chinese characters. Classes are held for two hours every Sunday afternoon and also include cultural activities such as introduction to Chinese yo-yo, poetry, calligraphy, traditional cooking, and adult Tai-Chi."
+        school_name: "The Chinese Language School of Columbia (CLSC)"
     },
     "about": {
         paragraph_pt1: "The Chinese Language School of Columbia (CLSC) is a non-political, non-sectarian, non-profit organization under 501(c)(3) that provides Chinese language and cultural instruction.  The school admits interested individuals without regard to race, religion, national origin or citizenship status, sex, gender identity or expression.",
@@ -17,29 +16,37 @@
         goal_2: "To promote and increase awareness of values honored by the Chinese culture that are pertinent to a peaceful, diverse and prosperous world as well as the development of the individual.",
         conclusion: "In order to achieve these objectives, the school specifically delivers instruction through native Mandarin Chinese speakers in an interactive environment that promotes mastery of language skills with regards speech, writing and comprehension. Furthermore, the culture of the school inspires a lifelong interest, understanding, practice and respect of the Chinese culture – elements that all contribute to the wholesome development of an individual in a diverse global setting."
     },
+    "registration": {
+        current_semester: "2020 Fall Semester",
+        paragraph_one: "Classes for CLSC’s fall semester will be held virtually because Howard County School facilities are closed from public use through 12/31/2020. All savings from the facility rental are being passed on to students and are reflected as a reduced tuition for the Fall semester."
+    },
+    "studentlife": {
+        paragraph_one: "The Chinese language is intimately associated with Chinese history and culture. Understanding Chinese culture is essential for deeper understanding of the meaning of Chinese words and expressions. Besides teaching the Chinese language, CLSC also integrates cultural activities into our curriculum. As students explore the activities, they strengthen their experience with the Chinese culture and language in a positive and engaging way. CLSC offers cultural activities in a small group setting in and out of the classroom. Within the classroom, students learn Chinese poetry and music. Outside of the classroom, CLSC hosts a series of fun cultural activities, some of which are captured below.",
+        paragraph_two: "In addition, CLSC plans to host culture events to showcase the traditional art performance such as Shadow Puppetry (皮影戲) and hand puppetry (布袋戲) as well as the traditional sculpting art such as handmade dough figurines (揑麵人)."
+    },
     links: [
-      ["Home", "/index.pug", "fas fa-home"],
-      ["About Us", "/about-us.pug", "far fa-file-image", [
-        ["Our Teachers", "/our-teachers.pug"],
-        ["School Leadership", "/school-leadership.pug"],
-        ["Bylaws", "/bylaws.pug"]
+      ["Home", "/index.html", "fas fa-home"],
+      ["About Us", "/about-us.html", "far fa-file-image", [
+        ["Our Teachers", "/our-teachers.html"],
+        ["School Leadership", "/school-leadership.html"],
+        ["Bylaws", "/bylaws.html"]
       ], "about-dropdown"
       ],
-      ["Academics", "/curriculum.pug", "fas fa-graduation-cap", [
-        ["Curriculum", "/curriculum.pug"],
-        ["Student Life", "/student-life.pug"],
-        ["Classroom Rules", "/classroom-rules.pug"],
-        ["Virtual Classroom Rules", "/virtual-classroom-rules.pug"],
-        ["Drawing Contest", "/drawing-contest.pug"]
+      ["Academics", "/curriculum.html", "fas fa-graduation-cap", [
+        ["Curriculum", "/curriculum.html"],
+        ["Student Life", "/student-life.html"],
+        ["Classroom Rules", "/classroom-rules.html"],
+        ["Virtual Classroom Rules", "/virtual-classroom-rules.html"],
+        ["Drawing Contest", "/drawing-contest.html"]
       ], "academics-dropdown",
       ],
-      ["Calendar", "/calendar.pug", "far fa-calendar-alt", [
-        ["Announcements", "/announcements.pug"]
+      ["Calendar", "/calendar.html", "far fa-calendar-alt", [
+        ["Announcements", "/announcements.html"]
       ], "calendar-dropdown",
       ],
-      ["Registration", "/registration.pug", "fas fa-book"],
-      ["Charitable Giving", "/charitable-giving.pug", "fas fa-gift"],
-      ["Contact Us", "/contact-us.pug", "fas fa-envelope"]
+      ["Registration", "/registration.html", "fas fa-book"],
+      ["Charitable Giving", "/charitable-giving.html", "fas fa-gift"],
+      ["Contact Us", "/contact-us.html", "fas fa-envelope"]
     ],
     contacts: [
       ["School Address", "8700 Old Annapolis Rd, Ellicott City, MD 21043"],

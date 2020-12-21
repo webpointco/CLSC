@@ -6,8 +6,8 @@ block prepend header
 block append content
   section.hero.is-white
     .container.px-6.pb-6
-      p.is-size-2.has-text-dark.has-text-weight-bold.is-size-3-mobile.pt-6 2020 Fall Semester
-      p.registration-text.is-size-5 Classes for CLSC’s fall semester will be held virtually because Howard County School facilities are closed from public use through 12/31/2020. All savings from the facility rental are being passed on to students and are reflected as a reduced tuition for the Fall semester.
+      p.is-size-2.has-text-dark.has-text-weight-bold.is-size-3-mobile.pt-6(data-editable=(DEV ? 'registration.current_semester' : false)) #{registration.current_semester}
+      p.registration-text.is-size-5(data-editable=(DEV ? 'registration.paragraph_one' : false)) #{registration.paragraph_one}
 
       .columns.has-text-weight-bold.has-text-centered.is-size-2.my-5
         .column.border-rightorbottom
