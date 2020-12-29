@@ -8,7 +8,7 @@ block append styles
 block append scripts
 
 block prepend header
-  - let page = "Home"
+  - let page = "home"
 
 block content
     section.hero.is-medium.has-home-background-img
@@ -24,13 +24,17 @@ block content
         .container
           .columns.carousel-text-container.is-vcentered
             .column
-              p.description-text #[strong(data-editable=(DEV ? 'home.school_name' : false)) strong(#{home.school_name})]
-                description-text(data-editable=(DEV ? 'home.intro_p' : false)) #{home.intro_p}
+              p.description-text
+                strong(data-editable=(DEV ? 'home.school_name' : false)) #{home.school_name}
+                span(data-editable=(DEV ? 'home.intro_p' : false)) #{home.intro_p}
 
             .column.is-half.px-0.carousel-column.mb-0
               .carousel
-                //- for i in [1, 2, 3, 4]
-                //-   img.slide.transition(src=`/images/Image${i}.JPG`, style='width:100%', alt='Photo of school children')
+                //fix alts later
+                img.slide.transition(src=`/images/Image1.JPG`, style='width:100%', alt='')
+                img.slide.transition(src=`/images/Image2.JPG`, style='width:100%', alt='')
+                img.slide.transition(src=`/images/Image3.JPG`, style='width:100%', alt='')
+                img.slide.transition(src=`/images/Image4.JPG`, style='width:100%', alt='')              
                 a.prev-btn &#x276E;
                 a.next-btn &#x276F;
                 br

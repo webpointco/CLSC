@@ -5,4 +5,4 @@ block prepend header
 
 block append content
   .container.documentcontainer
-    iframe(src='https://drive.google.com/file/d/1gbsTMxWZyRGm7FafOIVZBBzzdMOPRkEl/preview', width='100%', style='height: 100%; height: -webkit-fill-available;')
+    iframe(src=(lang=='en' ? 'https://drive.google.com/file/d/1gbsTMxWZyRGm7FafOIVZBBzzdMOPRkEl/preview' : 'other link'), width='100%', style='height: 100%; height: -webkit-fill-available;')

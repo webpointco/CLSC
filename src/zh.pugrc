@@ -3,22 +3,42 @@
   locals: {
     title: "Chinese Language School of Columbia",
     absoluteUrl: "https://webpoint.dev/CLSC/",
+    "titles": {
+        home: "Home",
+        about: "About Us",
+        teachers: "Our Teachers",
+        leadership: "School Leadership",
+        bylaws: "Bylaws",
+        academics:  "Academics",
+        curriculum: "Curriculum",
+        ourteam: "Our Team",
+        bylaws: "Bylaws",
+        life: "Student Life",
+        rules: "Classroom Rules",
+        vrules: "Virtual Classroom Rules",
+        drawing: "Drawing Contest",
+        calendar: "Calendar",
+        announcements: "Announcements",
+        registration: "Registration",
+        charitable: "Charitable Giving",
+        contact: "Contact Us"
+    },
     "home": {
         school_name: "The Chinese Language School of Columbia (CLSC)",
         intro_p: "was founded in 1975 in Howard County, MD. Since 2008, the school has been a proud partner of the Howard County Public School System. The school offers Chinese language classes to both native and non-native speakers with emphasis on speaking Mandarin and writing traditional Chinese characters. Classes are held for two hours every Sunday afternoon and also include cultural activities such as introduction to Chinese yo-yo, poetry, calligraphy, traditional cooking, and adult Tai-Chi."
     },
     "about": {
-        mission: "Mission Statement",
-        goals: "Goals & Objectives",
-        paragraph_pt1: "The Chinese Language School of Columbia (CLSC) is a non-political, non-sectarian, non-profit organization under 501(c)(3) that provides Chinese language and cultural instruction.  The school admits interested individuals without regard to race, religion, national origin or citizenship status, sex, gender identity or expression.",
-        paragraph_pt2: "CLSC was founded in 1975 in Howard County, Maryland. Since 2008, the school has been a proud partner of the Howard County Public School System. CLSC offers Chinese Language classes to native and non-native speakers with emphasis on speaking Mandarin and writing traditional Chinese characters. CLSC offers classes from foundational to advanced levels for anyone starting at 4 years old and up. Adult classes are also being planned to broaden our reach to provide practical Chinese skill to the wider community. Our classes are held for two hours each Sunday afternoon and also includes cultural activities such as introduction to Chinese yo-yo, poetry, calligraphy, Chinese cooking, and adult Tai-Chi.",
-        mission_statement_pt1: "The Chinese Language School of Columbia (CSLC) is dedicated to educating students through a time-tested method of teaching and a rigorous curriculum. Emphasis is given to mastering essential Chinese language skills through interactive speech, writing and comprehension, and inspiring a lifelong interest, understanding, practice and respect of the Chinese culture.",
-        mission_statement_pt2: "CLSC seeks to develop students of high academic achievement, intellectual curiosity, and strong moral character within a supportive and diverse community. Our graduates possess the curiosity, and foundational knowledge in practical Chinese to pursue satisfying and impactful lives in today’s diverse global arena.",
-        goals_objectives: "The Chinese Language School of Columbia (CSLC) is dedicated to educating students through a time-tested method of teaching and a rigorous curriculum. There are two important goals: ",
-        goal_1: "To provide quality education to local children and adults who are interested in learning Chinese Mandarin and the Chinese culture.",
-        goal_2: "To promote and increase awareness of values honored by the Chinese culture that are pertinent to a peaceful, diverse and prosperous world as well as the development of the individual.",
-        conclusion: "In order to achieve these objectives, the school specifically delivers instruction through native Mandarin Chinese speakers in an interactive environment that promotes mastery of language skills with regards speech, writing and comprehension. Furthermore, the culture of the school inspires a lifelong interest, understanding, practice and respect of the Chinese culture – elements that all contribute to the wholesome development of an individual in a diverse global setting."
-    },
+        mission: "宗旨說明 Mission Statement",
+        goals: "目標和目的 Goals and Objectives",
+        paragraph_pt1: "哥城中文學校(哥城)是註冊並符合IRS 501(c)(3)規章的非政治性,非宗教性的非營利組織。本校提供中文和中華文化的教學,所招收的學生是不分種族,宗教,族裔,國籍,性別或性別認同的。",
+        paragraph_pt2: "哥城是在1975年,於馬里蘭州的霍華郡創辦的。自2008年以來,本校一直是霍華郡公立學校的合作夥伴。哥城為社區人士提供說中文和寫正體字的中文教學。本校為四歲以上的學童提供循序漸進的中文教學課程。爲了擴大我們的教學領域,計劃將來增開成人班。哥城上課時間是每周日下午從一點半到四點,包括文化活動來介紹中國的扯鈴,詩歌,書法,中國烹飪和成人太極拳。",
+        mission_statement_pt1: "哥城以累積多年的教學經驗,及紥實的課程來教導學生。本校教學重點以互動方式達到“聼說讀寫”和全盤性的理解來學習中文,進而激發學生們終生對中華文化的興趣及尊重。.",
+        mission_statement_pt2: "哥城致力於培養樂觀進取和學業有成的學生,在這個多元化的社會裏,貢獻其所學所能。",
+        goals_objectives: "哥城的教學有兩個重要目標：",
+        goal_1: "為有興趣學習中文和中華文化的當地兒童及成年人提供優質教學。",
+        goal_2: "提升學生們對中華文化的尊重及其價值觀的認知。",
+        conclusion: "在此多元化的全球大環境中,為了實現這些目標,哥城聘用以中文為母語的教師,提供以互動式的教學方法,促進學生們對中文語音,寫作和理解力的學習。進而在本校提供的中文學習環境裏,教導學生們終生對中華文化的興趣及尊重。"
+      },
     "registration": {
         current_semester: "2020 Fall Semester",
         paragraph_one: "Classes for CLSC’s fall semester will be held virtually because Howard County School facilities are closed from public use through 12/31/2020. All savings from the facility rental are being passed on to students and are reflected as a reduced tuition for the Fall semester."

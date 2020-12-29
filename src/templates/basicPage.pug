@@ -4,4 +4,4 @@ block content
   section.hero.is-primary
     .container
       .hero-body.py-5
-        h1.title.is-1.is-size-3-touch.has-text-weight-bold.has-text-centered #{page}
+        h1.title.is-1.is-size-3-touch.has-text-weight-bold.has-text-centered(data-editable=(DEV ? 'titles.'+ page : false)) #{titles[page]}
