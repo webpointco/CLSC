@@ -1,0 +1,103 @@
+{
+  pretty: true,
+  locals: {
+    title: "Chinese Language School of Columbia",
+    absoluteUrl: "https://webpoint.dev/CLSC/",
+    "home": {
+        school_name: "The Chinese Language School of Columbia (CLSC)",
+        intro_p: "was founded in 1975 in Howard County, MD. Since 2008, the school has been a proud partner of the Howard County Public School System. The school offers Chinese language classes to both native and non-native speakers with emphasis on speaking Mandarin and writing traditional Chinese characters. Classes are held for two hours every Sunday afternoon and also include cultural activities such as introduction to Chinese yo-yo, poetry, calligraphy, traditional cooking, and adult Tai-Chi."
+    },
+    "about": {
+        mission: "Mission Statement",
+        goals: "Goals & Objectives",
+        paragraph_pt1: "The Chinese Language School of Columbia (CLSC) is a non-political, non-sectarian, non-profit organization under 501(c)(3) that provides Chinese language and cultural instruction.  The school admits interested individuals without regard to race, religion, national origin or citizenship status, sex, gender identity or expression.",
+        paragraph_pt2: "CLSC was founded in 1975 in Howard County, Maryland. Since 2008, the school has been a proud partner of the Howard County Public School System. CLSC offers Chinese Language classes to native and non-native speakers with emphasis on speaking Mandarin and writing traditional Chinese characters. CLSC offers classes from foundational to advanced levels for anyone starting at 4 years old and up. Adult classes are also being planned to broaden our reach to provide practical Chinese skill to the wider community. Our classes are held for two hours each Sunday afternoon and also includes cultural activities such as introduction to Chinese yo-yo, poetry, calligraphy, Chinese cooking, and adult Tai-Chi.",
+        mission_statement_pt1: "The Chinese Language School of Columbia (CSLC) is dedicated to educating students through a time-tested method of teaching and a rigorous curriculum. Emphasis is given to mastering essential Chinese language skills through interactive speech, writing and comprehension, and inspiring a lifelong interest, understanding, practice and respect of the Chinese culture.",
+        mission_statement_pt2: "CLSC seeks to develop students of high academic achievement, intellectual curiosity, and strong moral character within a supportive and diverse community. Our graduates possess the curiosity, and foundational knowledge in practical Chinese to pursue satisfying and impactful lives in today’s diverse global arena.",
+        goals_objectives: "The Chinese Language School of Columbia (CSLC) is dedicated to educating students through a time-tested method of teaching and a rigorous curriculum. There are two important goals: ",
+        goal_1: "To provide quality education to local children and adults who are interested in learning Chinese Mandarin and the Chinese culture.",
+        goal_2: "To promote and increase awareness of values honored by the Chinese culture that are pertinent to a peaceful, diverse and prosperous world as well as the development of the individual.",
+        conclusion: "In order to achieve these objectives, the school specifically delivers instruction through native Mandarin Chinese speakers in an interactive environment that promotes mastery of language skills with regards speech, writing and comprehension. Furthermore, the culture of the school inspires a lifelong interest, understanding, practice and respect of the Chinese culture – elements that all contribute to the wholesome development of an individual in a diverse global setting."
+    },
+    "registration": {
+        current_semester: "2020 Fall Semester",
+        paragraph_one: "Classes for CLSC’s fall semester will be held virtually because Howard County School facilities are closed from public use through 12/31/2020. All savings from the facility rental are being passed on to students and are reflected as a reduced tuition for the Fall semester."
+    },
+    "studentlife": {
+        paragraph_one: "The Chinese language is intimately associated with Chinese history and culture. Understanding Chinese culture is essential for deeper understanding of the meaning of Chinese words and expressions. Besides teaching the Chinese language, CLSC also integrates cultural activities into our curriculum. As students explore the activities, they strengthen their experience with the Chinese culture and language in a positive and engaging way. CLSC offers cultural activities in a small group setting in and out of the classroom. Within the classroom, students learn Chinese poetry and music. Outside of the classroom, CLSC hosts a series of fun cultural activities, some of which are captured below.",
+        paragraph_two: "In addition, CLSC plans to host culture events to showcase the traditional art performance such as Shadow Puppetry (皮影戲) and hand puppetry (布袋戲) as well as the traditional sculpting art such as handmade dough figurines (揑麵人)."
+    },
+    links: [
+      ["Home", "/index.html", "fas fa-home"],
+      ["About Us", "/about-us.html", "far fa-file-image", [
+        ["Our Teachers", "/our-teachers.html"],
+        ["School Leadership", "/school-leadership.html"],
+        ["Bylaws", "/bylaws.html"]
+      ], "about-dropdown"
+      ],
+      ["Academics", "/curriculum.html", "fas fa-graduation-cap", [
+        ["Curriculum", "/curriculum.html"],
+        ["Student Life", "/student-life.html"],
+        ["Classroom Rules", "/classroom-rules.html"],
+        ["Virtual Classroom Rules", "/virtual-classroom-rules.html"],
+        ["Drawing Contest", "/drawing-contest.html"]
+      ], "academics-dropdown",
+      ],
+      ["Calendar", "/calendar.html", "far fa-calendar-alt", [
+        ["Announcements", "/announcements.html"]
+      ], "calendar-dropdown",
+      ],
+      ["Registration", "/registration.html", "fas fa-book"],
+      ["Charitable Giving", "/charitable-giving.html", "fas fa-gift"],
+      ["Contact Us", "/contact-us.html", "fas fa-envelope"]
+    ],
+    contacts: [
+      ["School Address", "8700 Old Annapolis Rd, Ellicott City, MD 21043"],
+      ["Mailing Address", "P.O. Box 1292 Ellicott City, MD 21041"],
+      ["Principal", "clsc.principal@clscweb.org"],
+      ["Dean", "clsc.dean@clscweb.org"],
+      ["Registrar", "clsc.registrar@clscweb.org"]
+    ],
+    form: [
+      ["Name", "text"],
+      ["Email", "email"],
+    ],
+    activities: [
+      ["Chinese Cooking",
+        [
+          ["images/student-life/cooking-1.png"],
+          ["images/student-life/cooking-2.jpg"],
+        ],
+      ],
+      ["Chinese Calligraphy",
+        [
+          ["images/student-life/calligraphy-1.png"],
+          ["images/student-life/calligraphy-2.png"],
+        ],
+      ],
+      ["Chinese Brush Painting",
+        [
+          ["images/student-life/bruh-painting.jpg"],
+        ],
+      ],
+      ["Chinese Knotting",
+        [
+          ["images/student-life/knotting.png"],
+        ],
+      ],
+      ["Chinese Board Games",
+        [
+          ["images/student-life/mahjong.png"],
+          ["images/student-life/checkers.png"],
+          ["images/student-life/go.png"],
+        ],
+      ],
+      [null,
+        [
+          ["images/student-life/toys.jpg", "A Taiwanese dough figurine master provides instruction on the art form.", "is-size-6"],
+          ["images/student-life/tug-1.png", "And More!", "is-size-3 is-size-4-mobile"],
+        ],
+      ],
+    ],
+  }
+}
