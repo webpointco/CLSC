@@ -16,14 +16,14 @@ block append content
           figure.image
             img(src='images/CLSC-Classroom-Picture.JPG', alt='Students in a classroom')
       br
-      h2.subtitle.is-3.has-text-weight-bold Mission Statement
+      h2.subtitle.is-3.has-text-weight-bold(data-editable=(DEV ? 'about.mission' : false)) #{about.mission}
       p(data-editable=(DEV ? 'about.mission_statement_pt1' : false)) #{about.paragraph_pt1}
       br
 
       p(data-editable=(DEV ? 'about.mission_statement_pt2' : false)) #{about.mission_statement_pt2}
       br
       
-      h2.subtitle.is-3.has-text-weight-bold Goals and Objectives
+      h2.subtitle.is-3.has-text-weight-bold(data-editable=(DEV ? 'about.goals' : false)) #{about.goals}
       p(data-editable=(DEV ? 'about.goals_objectives' : false)) #{about.goals_objectives}
 
       .content
