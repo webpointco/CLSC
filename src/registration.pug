@@ -6,56 +6,82 @@ block prepend header
 block append content
   section.hero.is-white
     .container.px-6.pb-6
-      p.is-size-2.has-text-dark.has-text-weight-bold.is-size-3-mobile.pt-6(data-editable=(DEV ? 'registration.current_semester' : false)) #{registration.current_semester}
-      p.registration-text.is-size-5(data-editable=(DEV ? 'registration.paragraph_one' : false)) #{registration.paragraph_one}
+      p.is-size-2.has-text-dark.has-text-weight-bold.is-size-3-mobile.pt-6(data-editable=(DEV ? 'registrationpt1.current_semester' : false)) #{registrationpt1.current_semester}
+      p.registration-text.is-size-5(data-editable=(DEV ? 'registrationpt1.paragraph_one' : false)) #{registrationpt1.paragraph_one}
 
       .columns.has-text-weight-bold.has-text-centered.is-size-2.my-5
         .column.border-rightorbottom
-          p.underlined.pb-5 1 child
+          p.underlined.pb-5(data-editable=(DEV ? 'registrationpt1.one_child' : false)) #{registrationpt1.one_child}
           .slashed
-            p.is-size-2 $280
+            p.is-size-2(data-editable=(DEV ? 'registrationpt1.one_child_old_price' : false)) #{registrationpt1.one_child_old_price}
             img.slash-through(src='images/number-slash.svg', alt='A red slash through $280')
-          p.is-size-verybig $230
+          p.is-size-verybig(data-editable=(DEV ? 'registrationpt1.one_child_new_price' : false)) #{registrationpt1.one_child_new_price}
+        
         .column.border-rightorbottom
-          p.underlined 2 children
-          p.is-size-5.pb-5 (per household)
+          p.underlined(data-editable=(DEV ? 'registrationpt1.two_children' : false)) #{registrationpt1.two_children}
+          p.is-size-5.pb-5(data-editable=(DEV ? 'registrationpt1.per_household1' : false)) #{registrationpt1.per_household1}
           .slashed
-            p.is-size-2 $490
+            p.is-size-2(data-editable=(DEV ? 'registrationpt1.two_child_old_price' : false)) #{registrationpt1.two_child_old_price}
             img.slash-through(src='images/number-slash.svg', alt='A red slash through $490')
-          p.is-size-verybig $420
+          p.is-size-verybig(data-editable=(DEV ? 'registrationpt1.two_child_new_price' : false)) #{registrationpt1.two_child_new_price}
+        
         .column
-          p.underlined 3 children
-          p.is-size-5.pb-5 (per household)
+          p.underlined(data-editable=(DEV ? 'registrationpt1.three_children' : false)) #{registrationpt1.three_children}
+          p.is-size-5.pb-5(data-editable=(DEV ? 'registrationpt1.per_household2' : false)) #{registrationpt1.per_household2}
           .slashed
-            p.is-size-2 $700
+            p.is-size-2(data-editable=(DEV ? 'registrationpt1.three_child_old_price' : false)) #{registrationpt1.three_child_old_price}
             img.slash-through(src='images/number-slash.svg', alt='A red slash through $700')
-          p.is-size-verybig $610
+          p.is-size-verybig(data-editable=(DEV ? 'registrationpt1.three_child_new_price' : false)) #{registrationpt1.three_child_new_price}
       
-      p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile Payment Breakdown
+      p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile(data-editable=(DEV ? 'registrationpt1.breakdown' : false)) #{registrationpt1.breakdown}
       ul.list-text.is-size-5.pb-6
-        li Tuition: #[strong $180]
-        li Registration fee: #[strong $30] #[non-refundable (NON-REFUNDABLE)]
-        li Materials fee: #[strong $20] #[non-refundable (NON-REFUNDABLE)]
-        p.py-3 * <strong>TUITION REFUND POLICY:</strong> Students who withdraw or are removed from CLSC on/before the 3rd week of class are eligible for a <strong>75% tuition refund.</strong> No refunds will be permitted after the third week of class.
+        li
+          span(data-editable=(DEV ? 'registrationpt1.tuition' : false)) #{registrationpt1.tuition}
+          strong(data-editable=(DEV ? 'registrationpt1.tuition_cost' : false)) #{registrationpt1.tuition_cost}
+        li
+          span(data-editable=(DEV ? 'registrationpt1.registration_fee' : false)) #{registrationpt1.registration_fee}
+          strong(data-editable=(DEV ? 'registrationpt1.registration_cost' : false)) #{registrationpt1.registration_cost}
+          non-refundable(data-editable=(DEV ? 'registrationpt1.registration_non_refundable' : false)) #{registrationpt1.registration_non_refundable}
+        li 
+          span(data-editable=(DEV ? 'registrationpt1.registration_fee' : false)) #{registrationpt1.materials_fee}
+          strong(data-editable=(DEV ? 'registrationpt1.registration_cost' : false)) #{registrationpt1.materials_cost}
+          non-refundable(data-editable=(DEV ? 'registrationpt1.registration_non_refundable' : false)) #{registrationpt1.materials_non_refundable}
+        p.py-3 
+          strong(data-editable=(DEV ? 'registrationpt1.refund_policy' : false)) #{registrationpt1.refund_policy}
+          span(data-editable=(DEV ? 'registrationpt1.text_pt1' : false)) #{registrationpt1.text_pt1}
+          strong(data-editable=(DEV ? 'registrationpt1.refund_policy_pt2' : false)) #{registrationpt1.refund_policy_pt2}
+          span(data-editable=(DEV ? 'registrationpt1.text_pt2' : false)) #{registrationpt1.text_pt2}
 
-      p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile Adult Activity Class
-      p.registration-text.is-size-3.has-text-dark.has-text-weight-bold.py-2.is-size-5-mobile Tai Chi
+      p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile(data-editable=(DEV ? 'registrationpt1.adult_classes' : false)) #{registrationpt1.adult_classes}
+      p.registration-text.is-size-3.has-text-dark.has-text-weight-bold.py-2.is-size-5-mobile(data-editable=(DEV ? 'registrationpt1.taichi' : false)) #{registrationpt1.taichi}
       .is-size-5.pb-6
-        p #[strong $90] per person per semester (#[strong $180] per year) / #[strong $60] per person per semester with student enrollment.
-        p Anyone #[strong over the age of 18] is eligible to enroll in our Tai Chi class.
+      p
+        strong(data-editable=(DEV ? 'registrationpt1.bold_pt1' : false)) #{registrationpt1.bold_pt1}
+        span(data-editable=(DEV ? 'registrationpt1.unbold_pt1' : false)) #{registrationpt1.unbold_pt1}
+        strong(data-editable=(DEV ? 'registrationpt1.bold_pt2' : false)) #{registrationpt1.bold_pt2}
+        span(data-editable=(DEV ? 'registrationpt1.unbold_pt2' : false)) #{registrationpt1.unbold_pt2}
+        strong(data-editable=(DEV ? 'registrationpt1.bold_pt3' : false)) #{registrationpt1.bold_pt3}
+        span(data-editable=(DEV ? 'registrationpt1.unbold_pt3' : false)) #{registrationpt1.unbold_pt3}
+      p
+        span(data-editable=(DEV ? 'registrationpt1.unbold_pt4' : false)) #{registrationpt1.unbold_pt4}
+        strong(data-editable=(DEV ? 'registrationpt1.bold_pt4' : false)) #{registrationpt1.bold_pt4}
+        span(data-editable=(DEV ? 'registrationpt1.unbold_pt5' : false)) #{registrationpt1.unbold_pt5}
 
-      p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile Eligibility
-      p.registration-text.is-size-5.pb-6 Any student between the ages of 4 and 18 at the beginning of the school year is eligible to enroll at CLSC. Exceptions may be made on an individual basis by the Principal, who is responsible for reviewing the enrollment application and placement of the students.
+      p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile(data-editable=(DEV ? 'registrationpt1.eligibility' : false)) #{registrationpt1.eligibility}
+      p.registration-text.is-size-5.pb-6(data-editable=(DEV ? 'registrationpt1.eligibility_paragraph' : false)) #{registrationpt1.eligibility_paragraph} 
 
-      p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile New Student Trial Session
-      p.registration-text.is-size-5.pb-6 Prospective students can try out our classes at no cost. Please reach out to our Academic Dean at #[a.is-italic.has-text-weight-bold.has-text-primary(href='mailto:clsc.dean@clscweb.org') clsc.dean@clscweb.org] for further information.
-
-      p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile Late Registration / Entering School
-      p.registration-text.is-size-5 Students who enroll in CLSC four weeks after the semester’s start date will have their tuition pro-rated but will still pay for registration and material fees.
+      p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile(data-editable=(DEV ? 'registrationpt1.trial_session' : false)) #{registrationpt1.trial_session}
+      p.registration-text.is-size-5.pb-6 
+        span(data-editable=(DEV ? 'registrationpt1.trial_session_pt1' : false)) #{registrationpt1.trial_session_pt1}
+        a.is-italic.has-text-weight-bold.has-text-primary(href='mailto:clsc.dean@clscweb.org', data-editable=(DEV ? 'registrationpt1.trial_session_pt2' : false)) #{registrationpt1.trial_session_pt2}
+        span(data-editable=(DEV ? 'registrationpt1.trial_session_pt3' : false)) #{registrationpt1.trial_session_pt3}
+        
+      p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile(data-editable=(DEV ? 'registrationpt1.late_registration' : false)) #{registrationpt1.late_registration}
+      p.registration-text.is-size-5(data-editable=(DEV ? 'registrationpt1.late_registration_paragraph' : false)) #{registrationpt1.late_registration_paragraph}
 
   section.hero.is-light
     .container.px-6
-      p.is-size-1.has-text-weight-bold.py-4.is-size-2-mobile How to Register
+      p.is-size-1.has-text-weight-bold.py-4.is-size-2-mobile(data-editable=(DEV ? 'registrationpt1.how_to' : false)) #{registrationpt1.how_to}
       p.is-size-2.has-text-dark.has-text-weight-bold.pb-2.is-size-3-mobile New Students
       p.registration-text.is-size-5 Families of new students need to download and complete the #[strong CLSC new student registration form] shown below. Once completed, please e-mail the form to our Principal at #[a.is-italic.has-text-weight-bold.has-text-primary(href='mailto:clsc.principal@clscweb.org') clsc.principal@clscweb.org]. Please reach out to the Principal should you have any questions. We will contact you after receipt and review of your form.
       //-red button
@@ -72,7 +98,7 @@ block append content
       p.registration-text.is-size-5 All families of returning students should register for a new semester using the #[a.has-text-primary.has-text-weight-bold Registration Form] shown below. This form can also be used to update your family information. If you need further assistance, please contact the CLSC Registrar via email at #[a.is-italic.has-text-weight-bold.has-text-primary(href='mailto:clsc.registrar@clscweb.org') clsc.registrar@clscweb.org]. Please include your #[strong Family ID] in the subject line.
       //-red button again
       .column.is-one-third.has-text-centered.my-4.is-offset-one-third.pt-5.pb-4
-        a(href='http://www.registration.clscweb.org', target = 'blank')
+        a(href='http://www.registrationpt1.clscweb.org', target = 'blank')
           .columns.has-text-white.is-mobile.dark-on-hover
             .column
               i.fas.fa-link.is-size-1.py-2.pr-0.mr-0
