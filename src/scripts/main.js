@@ -22,5 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+  
+  document.getElementById("languageButton").addEventListener("click", ()=>{location.href=location.href.replace(/(?<=_)(en|zh)(?=.html)/,v=>v==="en"?"zh":"en");});
 
 });
