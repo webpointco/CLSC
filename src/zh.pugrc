@@ -1,6 +1,8 @@
 {
   pretty: true,
   locals: {
+    lang: "zh",
+    languageDesc: "English/中文",
     title: "Chinese Language School of Columbia",
     absoluteUrl: "https://webpoint.dev/CLSC/",
     "titles": {

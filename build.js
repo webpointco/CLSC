@@ -7,7 +7,8 @@ const fs = require("fs"),
 
 const files = [],
   attrs = new Set(),
-  importedPugOptions = JSON5.parse(fs.readFileSync("src/.pugrc"));
+  importedPugOptions = JSON5.parse(fs.readFileSync("src/.pugrc")),
+  importedChinesePugOptions = JSON5.parse(fs.readFileSync("src/zh.pugrc"));
 
 importedPugOptions.locals.DEV = true;
 
@@ -102,8 +103,8 @@ new PugBundler({
 //     includePaths: ["node_modules"]
 //   },
 //   pug: {
-//     importedPugOptions,
-//     ...importedPugOptions.locals,
+//     importedChinesePugOptions,
+//     ...importedChinesePugOptions.locals,
 //     lang: "zh"
 //   }
 // });

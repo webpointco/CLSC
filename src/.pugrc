@@ -1,6 +1,8 @@
 {
   pretty: true,
   locals: {
+    lang: "en",
+    languageDesc: "English/中文",
     title: "Chinese Language School of Columbia",
     absoluteUrl: "https://webpoint.dev/CLSC/",
     "titles": {
@@ -39,7 +41,7 @@
         goal_2: "To promote and increase awareness of values honored by the Chinese culture that are pertinent to a peaceful, diverse and prosperous world as well as the development of the individual.",
         conclusion: "In order to achieve these objectives, the school specifically delivers instruction through native Mandarin Chinese speakers in an interactive environment that promotes mastery of language skills with regards speech, writing and comprehension. Furthermore, the culture of the school inspires a lifelong interest, understanding, practice and respect of the Chinese culture – elements that all contribute to the wholesome development of an individual in a diverse global setting."
     },
-    "registrationpt1": {
+    "registration": {
         current_semester: "2020 Fall Semester",
         paragraph_one: "Classes for CLSC’s fall semester will be held virtually because Howard County School facilities are closed from public use through 12/31/2020. All savings from the facility rental are being passed on to students and are reflected as a reduced tuition for the Fall semester.",
         one_child: "1 child",
@@ -85,7 +87,33 @@
         trial_session_pt3: " for further information.",
         late_registration: "Late Registration / Entering School",
         late_registration_paragraph: "Students who enroll in CLSC four weeks after the semester’s start date will have their tuition pro-rated but will still pay for registration and material fees.",
-        how_to: "How to Register"
+        how_to: "How to Register",
+        new_student: "New Students",
+        new_student_para1:"Families of new students need to download and complete the ",
+        new_student_para2:"CLSC new student registration form ",
+        new_student_para3:"shown below. Once completed, please e-mail the form to our Principal at ",
+        new_student_para4:"clsc.principal@clscweb.org",
+        new_student_para5:". Please reach out to the Principal should you have any questions. We will contact you after receipt and review of your form.",
+        new_student_button: "New Student Register Here",
+        new_student_para6: "Please contact the Principal at ",
+        new_student_para7: "clsc.principal@clscweb.org",
+        new_student_para8: " with any questions or concerns. We will contact you after your form is reviewed and approved.",
+        curr_students: "Current Students",
+        curr_student_para1: "All families of returning students should register for a new semester using the ",
+        curr_student_para2: "Registration Form ",
+        curr_student_para3: "shown below. This form can also be used to update your family information. If you need further assistance, please contact the CLSC Registrar via email at ",
+        curr_student_para4: "clsc.registrar@clscweb.org",
+        curr_student_para5: ". Please include your ",
+        curr_student_para6: "Family ID ",
+        curr_student_para7: "in the subject line.",
+        curr_student_button: "Current Student Register Here",
+        payment: "Payment",
+        payment_paragraph: "CLSC accepts the following forms of payment.",
+        zelle: "Zelle Transfer",
+        zelle_pt1:"Instruction for payment by Zelle:",
+        zelle_pt2:"1) Send your payment to ",
+        zelle_pt3:"payment@clscweb.org"
+
     },
     "studentlife": {
         paragraph_one: "The Chinese language is intimately associated with Chinese history and culture. Understanding Chinese culture is essential for deeper understanding of the meaning of Chinese words and expressions. Besides teaching the Chinese language, CLSC also integrates cultural activities into our curriculum. As students explore the activities, they strengthen their experience with the Chinese culture and language in a positive and engaging way. CLSC offers cultural activities in a small group setting in and out of the classroom. Within the classroom, students learn Chinese poetry and music. Outside of the classroom, CLSC hosts a series of fun cultural activities, some of which are captured below.",

@@ -23,47 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-});
-
-// mobile dropdown functionality
-// i'm sorry if your name is Adam Goldstein and you're seeing this... I tried my best
-const dropdownTargets = ["about-dropdown", "academics-dropdown", "calendar-dropdown"];
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  // Get all "drop-container" elements
-  const $dropContainers = Array.prototype.slice.call(document.querySelectorAll(".drop-container"), 0);
-
-  // Check if there are any navbar burgers
-  if ($dropContainers.length > 0) {
-    // Add a click event on each of them
-    $dropContainers.forEach( el => {
-      el.addEventListener("click", () => {
-        let source = el.getAttribute("href");
-        //let target = "";
-        if (source === "/about-us.pug") {
-          // Get the target from the "data-target" attribute
-          const $target = document.getElementById(dropdownTargets[0]);
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle("mobile-onclick");
-          $target.classList.toggle("mobile-onclick");
-        }
-        if (source === "/curriculum.pug") {
-          // Get the target from the "data-target" attribute
-          const $target = document.getElementById(dropdownTargets[1]);
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle("mobile-onclick");
-          $target.classList.toggle("mobile-onclick");
-        }
-        if (source === "/calendar.pug") {
-          // Get the target from the "data-target" attribute
-          const $target = document.getElementById(dropdownTargets[2]);
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle("mobile-onclick");
-          $target.classList.toggle("mobile-onclick");
-        }
-      });
-    });
-  }
+  document.getElementById("languageButton").addEventListener("click", ()=>{location.href=location.href.replace(/(?<=_)(en|zh)(?=.html)/,v=>v==="en"?"zh":"en");});
 
 });

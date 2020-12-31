@@ -5,4 +5,4 @@ block prepend header
 
 block append content
   .container(style='padding: 1rem; display:flex; justify-content: center;align-items: center;')
-    iframe.slides(src='https://docs.google.com/presentation/d/e/2PACX-1vSSUZ6Yk1UTwATpPBv1BOebSFWzTV4WOYaa3dDJfO1ml7763XI5h5IUvsWyMAXiPA/embed?start=true&loop=false&delayms=3500', frameborder='0', allowfullscreen, mozallowfullscreen='true', webkitallowfullscreen='true')
+    iframe.slides(src=(lang=='en' ? 'https://docs.google.com/presentation/d/e/2PACX-1vSSUZ6Yk1UTwATpPBv1BOebSFWzTV4WOYaa3dDJfO1ml7763XI5h5IUvsWyMAXiPA/embed?start=false&loop=false&delayms=3000' : 'https://docs.google.com/presentation/d/e/2PACX-1vSSUZ6Yk1UTwATpPBv1BOebSFWzTV4WOYaa3dDJfO1ml7763XI5h5IUvsWyMAXiPA/embed?start=false&loop=false&delayms=3000'), frameborder='0', allowfullscreen, mozallowfullscreen='true', webkitallowfullscreen='true')
