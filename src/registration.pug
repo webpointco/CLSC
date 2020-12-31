@@ -129,11 +129,29 @@ block append content
         p.py-2
           span(data-editable=(DEV ? 'registration.zelle_pt2' : false)) #{registration.zelle_pt2}
           a.is-italic.has-text-weight-bold.has-text-primary(href='mailto:payment@clscweb.org', data-editable=(DEV ? 'registration.zelle_pt3' : false)) #{registration.zelle_pt3}
-        p.py-2 2) Include your #[strong Family ID], the #[strong student(s) name], and your #[strong phone number] in the Comments section of the transfer form.
-        p.py-2 #[a.has-text-primary.has-text-weight-bold.underlined(href='https://drive.google.com/file/d/1Ci9Mt0S827djvmMiBKRS_oAPUO9QyL_e/view', target = 'blank') Click here] for instructions to set-up a Zelle payment.
-        p.is-size-5.px-5 * Note: CLSC encourages everyone to pay via Zelle. Accordingly, we offer a one-time rebate of $5 per family when they first pay by Zelle, which will be credited as a discount towards the following semester’s tuition.
+        p.py-2
+          span(data-editable=(DEV ? 'registration.zelle_pt4' : false)) #{registration.zelle_pt4}
+          strong(data-editable=(DEV ? 'registration.zelle_pt5' : false)) #{registration.zelle_pt5}
+          span(data-editable=(DEV ? 'registration.zelle_pt6' : false)) #{registration.zelle_pt6} 
+          strong(data-editable=(DEV ? 'registration.zelle_pt7' : false)) #{registration.zelle_pt7}
+          span(data-editable=(DEV ? 'registration.zelle_pt8' : false)) #{registration.zelle_pt8} 
+          strong(data-editable=(DEV ? 'registration.zelle_pt9' : false)) #{registration.zelle_pt9}
+          span(data-editable=(DEV ? 'registration.zelle_pt10' : false)) #{registration.zelle_pt10} 
+        p.py-2
+          a.has-text-primary.has-text-weight-bold.underlined(href='https://drive.google.com/file/d/1Ci9Mt0S827djvmMiBKRS_oAPUO9QyL_e/view', target = 'blank', data-editable=(DEV ? 'registration.zelle_pt11' : false)) #{registration.zelle_pt11}
+          span(data-editable=(DEV ? 'registration.zelle_pt12' : false)) #{registration.zelle_pt12}
+        p.is-size-5.px-5(data-editable=(DEV ? 'registration.zelle_pt13' : false)) #{registration.zelle_pt13}
         
-      p.is-size-3.has-text-dark.has-text-weight-bold.pb-2.is-size-5-mobile Check
+      p.is-size-3.has-text-dark.has-text-weight-bold.pb-2.is-size-5-mobile(data-editable=(DEV ? 'registration.check_header' : false)) #{registration.check_header}
       .is-size-5.pb-6
-        p.pb-4 Please make your check payable to #[strong "Chinese Language School of Columbia"] or #[strong "CLSC"].
-        p #[strong Make sure to put your Family ID and child’s name on your check.] #[br] Mail your payment to #[em P.O. Box 1292, Ellicott City, MD 21041].
+        p.pb-4
+          span(data-editable=(DEV ? 'registration.check_text1_p1' : false)) #{registration.check_text1_p1}
+          strong(data-editable=(DEV ? 'registration.check_text1_p2' : false)) #{registration.check_text1_p2}
+          span(data-editable=(DEV ? 'registration.check_text1_p3' : false)) #{registration.check_text1_p3}
+          strong(data-editable=(DEV ? 'registration.check_text1_p4' : false)) #{registration.check_text1_p4}
+          span(data-editable=(DEV ? 'registration.check_text1_p5' : false)) #{registration.check_text1_p5}
+        p 
+          strong(data-editable=(DEV ? 'registration.check_text2_p1' : false)) #{registration.check_text2_p1}
+          br 
+          span(data-editable=(DEV ? 'registration.check_text2_p2' : false)) #{registration.check_text2_p2}
+          em(data-editable=(DEV ? 'registration.check_text2_p3' : false)) #{registration.check_text2_p3}
