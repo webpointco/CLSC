@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(|about-us|academics|calendar|registration|charitable-giving|contact-us)$ router.php [QSA,L]
+DirectoryIndex router.php
