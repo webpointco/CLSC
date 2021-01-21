@@ -70,7 +70,7 @@ new PugBundler({
     "src/templates"
   ],
   handleWrite: file => {
-    const finalPath = path.resolve("dist", path.relative("src", file.path/*.replace(".html", "_en.html")*/));
+    const finalPath = path.resolve("dist", path.relative("src", file.path.replace(".html", "_en.html")));
     fs.mkdirSync(path.dirname(finalPath), {recursive: true});
     fs.writeFileSync(finalPath, file.contents);
     return finalPath;
@@ -85,29 +85,29 @@ new PugBundler({
   }
 });
 
-// new PugBundler({
-//   files: [
-//     "src"
-//   ],
-//   exclude: [
-//     "src/.pugrc",
-//     "src/templates"
-//   ],
-//   handleWrite: file => {
-//     const finalPath = path.resolve("dist", path.relative("src", file.path.replace(".html", "_zh.html")));
-//     fs.mkdirSync(path.dirname(finalPath), {recursive: true});
-//     fs.writeFileSync(finalPath, file.contents);
-//     return finalPath;
-//   },
-//   sass: {
-//     includePaths: ["node_modules"]
-//   },
-//   pug: {
-//     importedChinesePugOptions,
-//     ...importedChinesePugOptions.locals,
-//     lang: "zh"
-//   }
-// });
+new PugBundler({
+  files: [
+    "src"
+  ],
+  exclude: [
+    "src/.pugrc",
+    "src/templates"
+  ],
+  handleWrite: file => {
+    const finalPath = path.resolve("dist", path.relative("src", file.path.replace(".html", "_zh.html")));
+    fs.mkdirSync(path.dirname(finalPath), {recursive: true});
+    fs.writeFileSync(finalPath, file.contents);
+    return finalPath;
+  },
+  sass: {
+    includePaths: ["node_modules"]
+  },
+  pug: {
+    importedChinesePugOptions,
+    ...importedChinesePugOptions.locals,
+    lang: "zh"
+  }
+});
 
 function tryEval(code) {
   try {
