@@ -4,7 +4,8 @@
       img(src='/images/logo.png', alt='CLSC Logo')
     // font should be adjusted
   .column.is-one-fourth.has-text-centered.header-top
-    a.has-background-dark.is-size-5.has-text-white.py-3.px-3#languageButton(data-editable=(DEV ? 'languageDesc' : false)) #{languageDesc}
+    - const languageLink = `?lang=${lang === "en" ? "zh" : "en"}`;
+    a.has-background-dark.is-size-5.has-text-white.py-3.px-3#languageButton(href=languageLink, data-editable=(DEV ? 'languageDesc' : false)) #{languageDesc}
 nav.has-background-light.navbar(role='navigation', aria-label='main navigation')
   .navbar-brand
     a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded='false', data-target='navbar')
