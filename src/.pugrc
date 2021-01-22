@@ -173,28 +173,28 @@
         paragraph_two: "In addition, CLSC plans to host culture events to showcase the traditional art performance such as Shadow Puppetry (皮影戲) and hand puppetry (布袋戲) as well as the traditional sculpting art such as handmade dough figurines (揑麵人)."
     },
     links: [
-      ["Home", "/index", "fas fa-home"],
-      ["About Us", "/about-us", "far fa-file-image", [
-        ["Our Teachers", "/our-teachers"],
-        ["School Leadership", "/school-leadership"],
-        ["Bylaws", "/bylaws"]
+      ["Home", "", "fas fa-home"],
+      ["About Us", "about-us", "far fa-file-image", [
+        ["Our Teachers", "our-teachers"],
+        ["School Leadership", "school-leadership"],
+        ["Bylaws", "bylaws"]
       ], "about-dropdown"
       ],
-      ["Academics", "/curriculum", "fas fa-graduation-cap", [
-        ["Curriculum", "/curriculum"],
-        ["Student Life", "/student-life"],
-        ["Classroom Rules", "/classroom-rules"],
-        ["Virtual Classroom Rules", "/virtual-classroom-rules"],
-        ["Drawing Contest", "/drawing-contest"]
+      ["Academics", "curriculum", "fas fa-graduation-cap", [
+        ["Curriculum", "curriculum"],
+        ["Student Life", "student-life"],
+        ["Classroom Rules", "classroom-rules"],
+        ["Virtual Classroom Rules", "virtual-classroom-rules"],
+        ["Drawing Contest", "drawing-contest"]
       ], "academics-dropdown",
       ],
-      ["Calendar", "/calendar", "far fa-calendar-alt", [
-        ["Announcements", "/announcements"]
+      ["Calendar", "calendar", "far fa-calendar-alt", [
+        ["Announcements", "announcements"]
       ], "calendar-dropdown",
       ],
-      ["Registration", "/registration", "fas fa-book"],
-      ["Charitable Giving", "/charitable-giving", "fas fa-gift"],
-      ["Contact Us", "/contact-us", "fas fa-envelope"]
+      ["Registration", "registration", "fas fa-book"],
+      ["Charitable Giving", "charitable-giving", "fas fa-gift"],
+      ["Contact Us", "contact-us", "fas fa-envelope"]
     ],
     contacts: [
       ["School Address", "8700 Old Annapolis Rd, Ellicott City, MD 21043"],

@@ -171,28 +171,28 @@
         paragraph_two: "此外， 哥城也積極的與台灣的各種傳統藝術表演劇團聯係，比如皮影戲，布袋戲，以及揑麵人的傳統藝術，譲全校師生都能有親身參與的經驗。"
     },
     links: [
-      ["首頁", "/index", "fas fa-home"],
-      ["關於我們", "/about-us", "far fa-file-image", [
-        ["我們的老師", "/our-teachers"],
-        ["董事會及理事會", "/school-leadership"],
-        ["學校規章", "/bylaws"]
+      ["首頁", "", "fas fa-home"],
+      ["關於我們", "about-us", "far fa-file-image", [
+        ["我們的老師", "our-teachers"],
+        ["董事會及理事會", "school-leadership"],
+        ["學校規章", "bylaws"]
       ], "about-dropdown"
       ],
-      ["教務", "/curriculum", "fas fa-graduation-cap", [
-        ["學術課程", "/curriculum"],
-        ["文化活動花絮", "/student-life"],
-        ["校規", "/classroom-rules"],
-        ["網路課程行為守則", "/virtual-classroom-rules"],
-        ["各項比賽", "/drawing-contest"]
+      ["教務", "curriculum", "fas fa-graduation-cap", [
+        ["學術課程", "curriculum"],
+        ["文化活動花絮", "student-life"],
+        ["校規", "classroom-rules"],
+        ["網路課程行為守則", "virtual-classroom-rules"],
+        ["各項比賽", "drawing-contest"]
       ], "academics-dropdown",
       ],
-      ["行事曆", "/calendar", "far fa-calendar-alt", [
-        ["公告", "/announcements"]
+      ["行事曆", "calendar", "far fa-calendar-alt", [
+        ["公告", "announcements"]
       ], "calendar-dropdown",
       ],
-      ["學生註冊", "/registration", "fas fa-book"],
-      ["慈善捐贈", "/charitable-giving", "fas fa-gift"],
-      ["聯絡我們", "/contact-us", "fas fa-envelope"]
+      ["學生註冊", "registration", "fas fa-book"],
+      ["慈善捐贈", "charitable-giving", "fas fa-gift"],
+      ["聯絡我們", "contact-us", "fas fa-envelope"]
     ],
     contacts: [
       ["School Address", "8700 Old Annapolis Rd, Ellicott City, MD 21043"],
