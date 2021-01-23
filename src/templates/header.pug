@@ -28,7 +28,7 @@ nav.has-background-light.navbar(role='navigation', aria-label='main navigation')
                   - let [title, target] = option;
                   a.navbar-item.is-size-5-mobile#dropdownstyling(href=target) #{title}
           else
-            a.navbar-item.above-others(class={'is-active': page === name}, href=url)
+            a.navbar-item.above-others(class={'is-active': titles[page] === name}, href=url)
               // i think it looks best if the icons aren't in the mobile nav
               i.has-text-primary.is-hidden-touch(class=[icon]) &nbsp;
               p.is-size-4-touch(data-editable=(DEV ? `links.${index}.=` : false)) #{name}
