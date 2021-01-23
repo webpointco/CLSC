@@ -9,6 +9,7 @@ html(lang='en')
     block scripts
       script(src='https://kit.fontawesome.com/f3e0a2dfd8.js', crossorigin='anonymous')
     if DEV
+      script window.lang = "#{lang}";
       script(src='/scripts/editability.js', defer, type='module')
     title(data-editable=(DEV ? 'title' : false)) #{title}
   body
