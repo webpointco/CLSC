@@ -9,4 +9,4 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 DirectoryIndex router.php
-#RewriteRule ^(|about-us|academics|calendar|registration|charitable-giving|contact-us)$ router.php [QSA,L]
+#RewriteRule ^(|about-us|academics|calendar|registration|charitable-giving|contact-us)$ secure/router.php [QSA,L]
