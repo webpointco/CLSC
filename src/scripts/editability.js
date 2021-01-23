@@ -18,7 +18,7 @@ import(`/secure/${lang}_out.js`).then(module => {
     const locals = getLocals(false),
       devLocals = getLocals(true);
     
-    if (oldLocals === JSON.stringify(locals) || confirm("Edits have been made since the last preview. Are you sure you want to upload before previewing?")) {
+    if (confirm("Are you sure you want to upload this version?") && (oldLocals === JSON.stringify(locals) || confirm("Edits have been made since the last preview. Are you sure you want to upload before previewing?"))) {
       const promises = [];
       for (const file of out.files) {
         promises.push(pushChanges(render(file, locals), "/"+getPathName(file), false, lang));
