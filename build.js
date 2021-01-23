@@ -3,7 +3,8 @@ const fs = require("fs"),
   nodeEval = require("node-eval"),
   path = require("path"),
   PugBundler = require("pug-bundler"),
-  PugCompileAsset = require("./PugCompileAsset");
+  PugCompileAsset = require("./PugCompileAsset"),
+  PugAssetNoHTML = require("./PugAssetNoHTML");
 
 const enFiles = [],
   enAttrs = new Set(),
@@ -12,7 +13,8 @@ const enFiles = [],
   importedPugOptions = JSON5.parse(fs.readFileSync("src/.pugrc")),
   importedChinesePugOptions = JSON5.parse(fs.readFileSync("src/zh.pugrc")),
   importedPugOptionsDev = {...importedPugOptions},
-  importedChinesePugOptionsDev = {...importedChinesePugOptions};
+  importedChinesePugOptionsDev = {...importedChinesePugOptions},
+  wasHTMLFile = /^.*[\/\\][^\.]*$/;
 
 importedPugOptionsDev.locals.DEV = true;
 importedChinesePugOptionsDev.locals.DEV = true;
@@ -135,11 +137,21 @@ new PugBundler({
     "src/zh.pugrc",
     "src/templates"
   ],
+  assets: [
+    PugAssetNoHTML
+  ],
   handleWrite: file => {
-    const finalPath = path.resolve("dist/secure", path.relative("src", file.path.replace(".html", "_en.html")));
+    let adjustedPath = file.path;
+    console.log({adjustedPath});
+    if (wasHTMLFile.test(adjustedPath)) {
+      adjustedPath += "_en.html";
+    }
+    console.log({filePath: file.path, adjustedPath});
+    const finalPath = path.resolve("dist/secure", path.relative("src", adjustedPath)),
+      returnPath = path.resolve("dist/secure", path.relative("src", file.path));
     fs.mkdirSync(path.dirname(finalPath), {recursive: true});
     fs.writeFileSync(finalPath, file.contents);
-    return finalPath;
+    return returnPath;
   },
   sass: {
     includePaths: ["node_modules"]
@@ -160,11 +172,19 @@ new PugBundler({
     "src/zh.pugrc",
     "src/templates"
   ],
+  assets: [
+    PugAssetNoHTML
+  ],
   handleWrite: file => {
-    const finalPath = path.resolve("dist/secure", path.relative("src", file.path.replace(".html", "_zh.html")));
+    let adjustedPath = file.path;
+    if (wasHTMLFile.test(adjustedPath)) {
+      adjustedPath += "_zh.html";
+    }
+    const finalPath = path.resolve("dist/secure", path.relative("src", adjustedPath)),
+      returnPath = path.resolve("dist/secure", path.relative("src", file.path));
     fs.mkdirSync(path.dirname(finalPath), {recursive: true});
     fs.writeFileSync(finalPath, file.contents);
-    return finalPath;
+    return returnPath;
   },
   sass: {
     includePaths: ["node_modules"]
@@ -185,11 +205,19 @@ new PugBundler({
     "src/zh.pugrc",
     "src/templates"
   ],
+  assets: [
+    PugAssetNoHTML
+  ],
   handleWrite: file => {
-    const finalPath = path.resolve("dist", path.relative("src", file.path.replace(".html", "_en.html")));
+    let adjustedPath = file.path;
+    if (wasHTMLFile.test(adjustedPath)) {
+      adjustedPath += "_en.html";
+    }
+    const finalPath = path.resolve("dist", path.relative("src", adjustedPath)),
+      returnPath = path.resolve("dist/secure", path.relative("src", file.path));
     fs.mkdirSync(path.dirname(finalPath), {recursive: true});
     fs.writeFileSync(finalPath, file.contents);
-    return finalPath;
+    return returnPath;
   },
   sass: {
     includePaths: ["node_modules"]
@@ -211,11 +239,19 @@ new PugBundler({
     "src/zh.pugrc",
     "src/templates"
   ],
+  assets: [
+    PugAssetNoHTML
+  ],
   handleWrite: file => {
-    const finalPath = path.resolve("dist", path.relative("src", file.path.replace(".html", "_zh.html")));
+    let adjustedPath = file.path;
+    if (wasHTMLFile.test(adjustedPath)) {
+      adjustedPath += "_zh.html";
+    }
+    const finalPath = path.resolve("dist", path.relative("src", adjustedPath)),
+      returnPath = path.resolve("dist/secure", path.relative("src", file.path));
     fs.mkdirSync(path.dirname(finalPath), {recursive: true});
     fs.writeFileSync(finalPath, file.contents);
-    return finalPath;
+    return returnPath;
   },
   sass: {
     includePaths: ["node_modules"]
