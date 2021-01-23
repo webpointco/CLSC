@@ -25,9 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // mobile dropdown functionality	
 // i'm sorry if your name is Adam Goldstein and you're seeing this... I tried my best	
-const dropdownTargets = ["about-dropdown", "academics-dropdown", "calendar-dropdown"];	
-
-document.addEventListener("DOMContentLoaded", () => {	
+  const dropdownTargets = ["about-dropdown", "academics-dropdown", "calendar-dropdown"];	
 
   // Get all "drop-container" elements	
   const $dropContainers = Array.prototype.slice.call(document.querySelectorAll(".drop-container"), 0);	
