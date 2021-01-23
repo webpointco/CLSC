@@ -76,7 +76,7 @@ new PugBundler({
 });
 
 console.log({enAttrs});
-fs.writeFileSync("dist/secure/en_out.js", "export default "+JSON.stringify({files: enFiles, attrs: [...enAttrs], defaultLocals: {...importedPugOptions.locals, DEV: false}}));
+fs.writeFileSync("dist/secure/en_out.js", "export default "+JSON.stringify({files: enFiles, /*attrs: [...enAttrs],*/ defaultLocals: {...importedPugOptions.locals, DEV: false}}));
 
 
 new PugBundler({
@@ -124,7 +124,57 @@ new PugBundler({
 });
 
 console.log({zhAttrs});
-fs.writeFileSync("dist/secure/zh_out.js", "export default "+JSON.stringify({files: zhFiles, attrs: [...zhAttrs], defaultLocals: {...importedChinesePugOptions.locals, DEV: false}}));
+fs.writeFileSync("dist/secure/zh_out.js", "export default "+JSON.stringify({files: zhFiles, /*attrs: [...zhAttrs],*/ defaultLocals: {...importedChinesePugOptions.locals, DEV: false}}));
+
+new PugBundler({
+  files: [
+    "src"
+  ],
+  exclude: [
+    "src/.pugrc",
+    "src/zh.pugrc",
+    "src/templates"
+  ],
+  handleWrite: file => {
+    const finalPath = path.resolve("dist/secure", path.relative("src", file.path.replace(".html", "_en.html")));
+    fs.mkdirSync(path.dirname(finalPath), {recursive: true});
+    fs.writeFileSync(finalPath, file.contents);
+    return finalPath;
+  },
+  sass: {
+    includePaths: ["node_modules"]
+  },
+  pug: {
+    ...importedPugOptionsDev,
+    ...importedPugOptionsDev.locals,
+    lang: "en",
+  }
+});
+
+new PugBundler({
+  files: [
+    "src"
+  ],
+  exclude: [
+    "src/.pugrc",
+    "src/zh.pugrc",
+    "src/templates"
+  ],
+  handleWrite: file => {
+    const finalPath = path.resolve("dist/secure", path.relative("src", file.path.replace(".html", "_zh.html")));
+    fs.mkdirSync(path.dirname(finalPath), {recursive: true});
+    fs.writeFileSync(finalPath, file.contents);
+    return finalPath;
+  },
+  sass: {
+    includePaths: ["node_modules"]
+  },
+  pug: {
+    ...importedChinesePugOptionsDev,
+    ...importedChinesePugOptionsDev.locals,
+    lang: "zh"
+  }
+});
 
 new PugBundler({
   files: [
@@ -178,56 +228,6 @@ new PugBundler({
   }
 });
 
-new PugBundler({
-  files: [
-    "src"
-  ],
-  exclude: [
-    "src/.pugrc",
-    "src/zh.pugrc",
-    "src/templates"
-  ],
-  handleWrite: file => {
-    const finalPath = path.resolve("dist/secure", path.relative("src", file.path.replace(".html", "_en.html")));
-    fs.mkdirSync(path.dirname(finalPath), {recursive: true});
-    fs.writeFileSync(finalPath, file.contents);
-    return finalPath;
-  },
-  sass: {
-    includePaths: ["node_modules"]
-  },
-  pug: {
-    ...importedPugOptionsDev,
-    ...importedPugOptionsDev.locals,
-    lang: "en",
-  }
-});
-
-new PugBundler({
-  files: [
-    "src"
-  ],
-  exclude: [
-    "src/.pugrc",
-    "src/zh.pugrc",
-    "src/templates"
-  ],
-  handleWrite: file => {
-    const finalPath = path.resolve("dist/secure", path.relative("src", file.path.replace(".html", "_zh.html")));
-    fs.mkdirSync(path.dirname(finalPath), {recursive: true});
-    fs.writeFileSync(finalPath, file.contents);
-    return finalPath;
-  },
-  sass: {
-    includePaths: ["node_modules"]
-  },
-  pug: {
-    ...importedChinesePugOptionsDev,
-    ...importedChinesePugOptionsDev.locals,
-    lang: "zh"
-  }
-});
-
 const pathNames = enFiles.map(file => file.relativePath.replace(".html", ""));
 fs.writeFileSync("dist/secure/paths.php", 
 `<?php
@@ -247,6 +247,5 @@ ${
 
 const strippedNames = pathNames.map(name => name !== "index" ? name : "");
 strippedNames.sort();
-const htaccessRedirectRule = `RewriteRule ^(${strippedNames.join("|")})$ router.php [QSA,L]\n`;
-fs.appendFileSync("dist/.htaccess", htaccessRedirectRule);
-fs.appendFileSync("dist/secure/.htaccess", htaccessRedirectRule);
+fs.appendFileSync("dist/.htaccess", `RewriteRule ^(${strippedNames.join("|")})$ router.php [QSA,L]\n`);
+fs.appendFileSync("dist/secure/.htaccess", `RewriteRule ^(${strippedNames.join("|")})$ secure/router.php [QSA,L]\n`);
