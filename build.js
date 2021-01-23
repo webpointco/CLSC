@@ -142,11 +142,9 @@ new PugBundler({
   ],
   handleWrite: file => {
     let adjustedPath = file.path;
-    console.log({adjustedPath});
     if (wasHTMLFile.test(adjustedPath)) {
       adjustedPath += "_en.html";
     }
-    console.log({filePath: file.path, adjustedPath});
     const finalPath = path.resolve("dist/secure", path.relative("src", adjustedPath)),
       returnPath = path.resolve("dist/secure", path.relative("src", file.path));
     fs.mkdirSync(path.dirname(finalPath), {recursive: true});
