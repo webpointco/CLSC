@@ -24,6 +24,8 @@
         contact: "聯絡我們"
         },
     "home": {
+        welcome: "Welcome",
+        register_button: "Register Here",
         school_name: "The Chinese Language School of Columbia (CLSC)",
         intro_p: " was founded in 1975 in Howard County, MD. Since 2008, the school has been a proud partner of the Howard County Public School System. The school offers Chinese language classes to both native and non-native speakers with emphasis on speaking Mandarin and writing traditional Chinese characters. Classes are held for two hours every Sunday afternoon and also include cultural activities such as introduction to Chinese yo-yo, poetry, calligraphy, traditional cooking, and adult Tai-Chi."
     },
