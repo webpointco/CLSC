@@ -28,6 +28,11 @@ import(`/secure/${lang}_out.js`).then(module => {
     }
   });
 
+  
+  document.getElementById("logout").addEventListener("click", () => {
+    confirm("Are you sure you want to log out? If so, select \"OK\" on this popup and \"Cancel\" on the next one. Otherwise, select \"Cancel\" here.") && logout();
+  });
+
   for (const node of document.querySelectorAll("[data-editable]")) {
     node.contentEditable = "true";
   }
@@ -63,6 +68,10 @@ import(`/secure/${lang}_out.js`).then(module => {
       }, 
       body: JSON.stringify({content, lang, page, editable})
     }).then(rawResponse => rawResponse.text()).then(response => {console.log({response, page, editable, lang, content})});
+  }
+
+  function logout() {
+    return fetch("./", {headers: {Authorization: ""}}).then(() => {location.href = "/"});
   }
 
 })
