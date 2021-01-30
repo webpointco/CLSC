@@ -173,7 +173,7 @@
         paragraph_two: "In addition, CLSC plans to host culture events to showcase the traditional art performance such as Shadow Puppetry (皮影戲) and hand puppetry (布袋戲) as well as the traditional sculpting art such as handmade dough figurines (揑麵人)."
     },
     links: [
-      ["Home", "./index", "fas fa-home"],
+      ["Home", "./", "fas fa-home"],
       ["About Us", "about-us", "far fa-file-image", [
         ["Our Teachers", "our-teachers"],
         ["School Leadership", "school-leadership"],

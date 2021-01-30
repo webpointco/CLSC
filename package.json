@@ -4,7 +4,6 @@
   "description": "A simple Pug/SCSS boilerplate for WebPoint.",
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
-    "build.js": "^0.3.0",
     "bulma": "^0.9.0",
     "bulma-carousel": "^4.0.4",
     "core-js": "^2.6.11",
