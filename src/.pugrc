@@ -23,6 +23,11 @@
         charitable: "Charitable Giving",
         contact: "Contact Us"
     },
+    "footer": {
+      precopyright: "Copyright © ",
+      postcopyright: " Chinese Language School of Columbia. All Rights Reserved.",
+      created: "Website created by "
+    },
     "home": {
         welcome: "Welcome",
         register_button: "Register Here",
@@ -197,11 +202,11 @@
       ["Contact Us", "contact-us", "fas fa-envelope"]
     ],
     contacts: [
-      ["School Address", "8700 Old Annapolis Rd, Ellicott City, MD 21043"],
-      ["Mailing Address", "P.O. Box 1292 Ellicott City, MD 21041"],
-      ["Principal", "clsc.principal@clscweb.org"],
-      ["Dean", "clsc.dean@clscweb.org"],
-      ["Registrar", "clsc.registrar@clscweb.org"]
+      ["School Address: ", "8700 Old Annapolis Rd, Ellicott City, MD 21043"],
+      ["Mailing Address: ", "P.O. Box 1292 Ellicott City, MD 21041"],
+      ["Principal: ", "clsc.principal@clscweb.org"],
+      ["Dean: ", "clsc.dean@clscweb.org"],
+      ["Registrar: ", "clsc.registrar@clscweb.org"]
     ],
     form: [
       ["Name", "text"],

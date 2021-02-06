@@ -23,6 +23,11 @@
         charitable: "慈善捐贈",
         contact: "聯絡我們"
         },
+    "footer": {
+      precopyright: "Copyright © ",
+      postcopyright: " Chinese Language School of Columbia. All Rights Reserved.",
+      created: "Website created by "
+    },
     "home": {
         welcome: "Welcome",
         register_button: "Register Here",

@@ -1,19 +1,24 @@
 footer.footer.f-mobile
-  script(src='/scripts/main.js')
+  script(src='../scripts/main.js')
   .container.is-centered
     .columns.has-text-white.has-text-centered-mobile
       .column
         content
-          p.py-1 #{new Date().getFullYear()} @ Chinese Language School of Columbia. All Rights Reserved.
-          p.py-1 Website created by #[a.footer-link(href='https://webpoint.dev/', target = 'blank') WebPoint]
+          p.py-1
+            span(data-editable=(DEV ? 'footer.precopyright' : false)) #{footer.precopyright}
+            span #{new Date().getFullYear()}
+            span(data-editable=(DEV ? 'footer.postcopyright' : false)) #{footer.postcopyright}
+          p.py-1
+            span(data-editable=(DEV ? 'footer.created' : false)) #{footer.created}
+            a.footer-link(href='https://webpoint.dev/', target = 'blank') WebPoint
           br
           //- icons need to be linked to the actual socials!
       .column
-        each contact in contacts
+        each contact, index in contacts
           - let [target, info] = contact;
           .contacts.py-1.is-size-6-mobile
-            span.has-text-weight-bold #{target}: 
+            span.has-text-weight-bold(data-editable=(DEV ? `contacts.${index}.0` : false)) #{target}
             br.is-hidden-desktop
-            span #{info}
+            span(data-editable=(DEV ? `contacts.${index}.1` : false)) #{info}
             br
       .column.is-hidden-desktop
